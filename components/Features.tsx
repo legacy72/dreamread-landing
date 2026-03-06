@@ -3,17 +3,38 @@ export default function Features() {
     {
       icon: "💤",
       title: "Smart Sleep Detection",
-      description: "Monitors your heart rate and movement to detect when you fall asleep",
-    },
-    {
-      icon: "🎧",
-      title: "Seamless Playback",
-      description: "Pick up right where you left off, with automatic progress saving",
+      description:
+        "Monitors your Apple Watch heart rate to automatically pause when you fall asleep",
     },
     {
       icon: "⌚",
       title: "Apple Watch Control",
-      description: "Control playback and view progress directly from your wrist",
+      description:
+        "Control playback and monitor your heart rate directly from your wrist",
+    },
+    {
+      icon: "🌙",
+      title: "Sleep Timer",
+      description:
+        "Set a 15, 30, 45, or 60-minute timer — audio fades out automatically",
+    },
+    {
+      icon: "🔖",
+      title: "Bookmarks",
+      description:
+        "Save your favorite moments and jump back to them instantly",
+    },
+    {
+      icon: "🎧",
+      title: "Lock Screen Controls",
+      description:
+        "Control playback from the Lock Screen or Control Center without unlocking",
+    },
+    {
+      icon: "📚",
+      title: "Personal Library",
+      description:
+        "Import mp3 and m4a files from Files app with automatic progress saving",
     },
   ];
 
@@ -29,7 +50,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}

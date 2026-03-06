@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
+import Pricing from "@/components/Pricing";
 import AppStoreButton from "@/components/AppStoreButton";
 import Footer from "@/components/Footer";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Features />
       <HowItWorks />
+      <Pricing />
 
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
