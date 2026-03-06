@@ -22,71 +22,80 @@ export default function PrivacyPolicy() {
 
         <article className="prose prose-invert prose-lg max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Privacy Policy</h1>
-          <p className="text-accent/60 mb-12">Last updated: December 1, 2024</p>
+          <p className="text-accent/60 mb-12">Last updated: March 6, 2025</p>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Information We Collect</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">Overview</h2>
+            <p className="text-accent/80">
+              DreamRead is designed with privacy in mind. We do not collect, transmit, or store your personal data on any external servers. All data remains on your device or in your personal iCloud account.
+            </p>
+          </section>
 
-            <h3 className="text-2xl font-semibold mb-3 text-white mt-8">Health Data</h3>
-            <ul className="text-accent/80 space-y-2">
-              <li>Heart rate data from Apple Watch (processed locally, not stored on servers)</li>
-              <li>Motion data (processed locally)</li>
-              <li>We do NOT store your health data on our servers</li>
+          <section className="mb-12">
+            <h2 className="text-3xl font-semibold mb-4 text-white">Health Data (HealthKit)</h2>
+            <p className="text-accent/80 mb-4">
+              DreamRead uses Apple HealthKit to read heart rate data from your Apple Watch for the Sleep Detection feature.
+            </p>
+            <ul className="text-accent/80 space-y-2 mb-4">
+              <li>Heart rate data is processed entirely on your device in real time</li>
+              <li>Heart rate data is never stored, transmitted, or shared with any third party</li>
+              <li>Heart rate data is never used for advertising, marketing, or data broker purposes</li>
+              <li>Heart rate data is used solely to determine when to pause audio playback</li>
             </ul>
+            <p className="text-accent/80">
+              We do not use HealthKit data for any purpose other than providing Sleep Detection functionality within the app.
+            </p>
+          </section>
 
-            <h3 className="text-2xl font-semibold mb-3 text-white mt-8">User Content</h3>
+          <section className="mb-12">
+            <h2 className="text-3xl font-semibold mb-4 text-white">User Content</h2>
             <ul className="text-accent/80 space-y-2">
-              <li>Audiobook files (stored locally on your device)</li>
-              <li>Playback progress (stored locally and in iCloud)</li>
-              <li>Bookmarks and notes (stored locally and in iCloud)</li>
-            </ul>
-
-            <h3 className="text-2xl font-semibold mb-3 text-white mt-8">Analytics</h3>
-            <ul className="text-accent/80 space-y-2">
-              <li>App usage statistics (anonymous)</li>
-              <li>Crash reports (anonymous)</li>
+              <li>Audiobook files are stored locally on your device only</li>
+              <li>Playback progress and bookmarks are stored locally and optionally synced via your personal iCloud account</li>
+              <li>We have no access to your audiobook files or listening history</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">How We Use Information</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">Data We Do Not Collect</h2>
+            <p className="text-accent/80 mb-4">DreamRead does not collect:</p>
             <ul className="text-accent/80 space-y-2">
-              <li>To provide sleep detection functionality</li>
-              <li>To improve app performance</li>
-              <li>To fix bugs and crashes</li>
-            </ul>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Data Storage</h2>
-            <ul className="text-accent/80 space-y-2">
-              <li>All audiobook files stored locally on your device</li>
-              <li>Health data processed in real-time, never transmitted</li>
-              <li>Progress synced via iCloud (optional)</li>
+              <li>Personal identifiers (name, email, phone number)</li>
+              <li>Location data</li>
+              <li>Health or fitness data beyond real-time heart rate processing</li>
+              <li>Usage analytics or crash reports sent to our servers</li>
             </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Third-Party Services</h2>
             <ul className="text-accent/80 space-y-2">
-              <li>Apple HealthKit (for heart rate monitoring)</li>
-              <li>Apple iCloud (for sync, optional)</li>
+              <li><strong className="text-white">Apple HealthKit</strong> — used to read heart rate data on-device only</li>
+              <li><strong className="text-white">Apple iCloud</strong> — used to sync your progress and bookmarks across your own devices (optional)</li>
             </ul>
+            <p className="text-accent/80 mt-4">
+              No other third-party SDKs, analytics tools, or advertising networks are used.
+            </p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Your Rights</h2>
-            <ul className="text-accent/80 space-y-2">
-              <li>Delete your data anytime</li>
-              <li>Export your data</li>
-              <li>Opt-out of analytics</li>
-            </ul>
+            <h2 className="text-3xl font-semibold mb-4 text-white">Data Retention</h2>
+            <p className="text-accent/80">
+              Since all data is stored locally on your device or in your personal iCloud, you can delete it at any time by removing the app or clearing iCloud data through iOS Settings.
+            </p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Children&apos;s Privacy</h2>
             <p className="text-accent/80">
-              This app is not intended for children under 13.
+              DreamRead is not intended for children under the age of 13. We do not knowingly collect any information from children under 13.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-3xl font-semibold mb-4 text-white">Changes to This Policy</h2>
+            <p className="text-accent/80">
+              We may update this Privacy Policy from time to time. Any changes will be reflected by updating the date at the top of this page.
             </p>
           </section>
 
