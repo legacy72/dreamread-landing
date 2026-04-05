@@ -79,7 +79,7 @@ export default function Support() {
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">What&apos;s included in Premium?</h3>
                 <p className="text-accent/80">
-                  Premium unlocks Sleep Detection via Apple Watch, advanced playback controls, extended listening stats (up to 365 days), sleep session quality info, and higher limits (100 books, 100 bookmarks, 20 folders). Plans: $5.99/month or $34.99/year with a 7-day free trial.
+                  Premium unlocks Sleep Detection via Apple Watch, advanced playback controls, unlimited listening stats, sleep session quality info, and unlimited books, bookmarks, and folders. Plans: $5.99/month or $34.99/year with a 7-day free trial.
                 </p>
               </div>
 

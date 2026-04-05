@@ -28,7 +28,7 @@ export default function Pricing() {
 
             <ul className="space-y-3 mb-8">
               {[
-                "Up to 10 audiobooks",
+                "Up to 50 audiobooks",
                 "10 bookmarks",
                 "3 folders",
                 "Sleep timer",
@@ -73,12 +73,12 @@ export default function Pricing() {
 
             <ul className="space-y-3 mb-8">
               {[
-                "Up to 100 audiobooks",
-                "100 bookmarks",
-                "20 folders",
+                "Unlimited audiobooks",
+                "Unlimited bookmarks",
+                "Unlimited folders",
                 "Sleep Detection via Apple Watch",
                 "Advanced playback controls",
-                "365-day listening stats",
+                "Unlimited listening stats",
                 "Sleep session quality info",
                 "Everything in Free",
               ].map((feature, i) => (
