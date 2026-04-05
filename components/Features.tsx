@@ -28,7 +28,7 @@ export default function Features() {
       icon: "🎧",
       title: "All Popular Formats",
       description:
-        "Import MP3, M4A, M4B, FLAC, WAV, AIFF, OGG, Opus files with automatic progress saving",
+        "Import MP3, M4A, M4B, FLAC, WAV, AIFF, OGG, Opus, AWB files with automatic progress saving",
     },
     {
       icon: "📊",

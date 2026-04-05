@@ -2,8 +2,8 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "1",
-      title: "Import Your Audiobooks",
-      description: "Add your favorite audiobook files to DreamRead",
+      title: "Choose Your Audiobook",
+      description: "Import your own files or browse 15,000+ free books from LibriVox",
       icon: "📚",
     },
     {
