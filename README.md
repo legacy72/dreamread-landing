@@ -152,7 +152,7 @@ Edit `app/sitemap.ts` to change from `dreamread.app` to your domain.
 
 ### Update Contact Email
 
-Current email: `support@dreamread.app`
+Current email: `hoperoina2016@gmail.com`
 
 Search and replace in:
 - `components/Footer.tsx`
@@ -195,4 +195,4 @@ All rights reserved © 2024 DreamRead
 
 ## Support
 
-For questions or issues, contact: support@dreamread.app
+For questions or issues, contact: hoperoina2016@gmail.com

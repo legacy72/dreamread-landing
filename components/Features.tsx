@@ -19,22 +19,22 @@ export default function Features() {
         "Set a 15, 30, 45, or 60-minute timer — audio fades out automatically",
     },
     {
-      icon: "🔖",
-      title: "Bookmarks",
+      icon: "📖",
+      title: "15,000+ Free Audiobooks",
       description:
-        "Save your favorite moments and jump back to them instantly",
+        "Browse and listen to the built-in LibriVox catalog — no sign-up required",
     },
     {
       icon: "🎧",
-      title: "Lock Screen Controls",
+      title: "All Popular Formats",
       description:
-        "Control playback from the Lock Screen or Control Center without unlocking",
+        "Import MP3, M4A, M4B, FLAC, WAV, AIFF, OGG, Opus files with automatic progress saving",
     },
     {
-      icon: "📚",
-      title: "Personal Library",
+      icon: "📊",
+      title: "Listening Stats",
       description:
-        "Import mp3 and m4a files from Files app with automatic progress saving",
+        "Track your bedtime listening habits and sleep session quality over time",
     },
   ];
 

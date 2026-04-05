@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
         <article className="prose prose-invert prose-lg max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Privacy Policy</h1>
-          <p className="text-accent/60 mb-12">Last updated: March 6, 2025</p>
+          <p className="text-accent/60 mb-12">Last updated: April 4, 2026</p>
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Overview</h2>
@@ -68,10 +68,23 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-12">
+            <h2 className="text-3xl font-semibold mb-4 text-white">Purchases and Subscriptions</h2>
+            <p className="text-accent/80 mb-4">
+              DreamRead offers optional in-app subscriptions processed entirely by Apple through the App Store.
+            </p>
+            <ul className="text-accent/80 space-y-2">
+              <li>We do not collect, store, or have access to your payment information</li>
+              <li>All billing and transaction data is managed by Apple</li>
+              <li>We only receive a confirmation of your subscription status to unlock premium features</li>
+            </ul>
+          </section>
+
+          <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Third-Party Services</h2>
             <ul className="text-accent/80 space-y-2">
               <li><strong className="text-white">Apple HealthKit</strong> — used to read heart rate data on-device only</li>
               <li><strong className="text-white">Apple iCloud</strong> — used to sync your progress and bookmarks across your own devices (optional)</li>
+              <li><strong className="text-white">Apple StoreKit</strong> — used to process in-app subscriptions; no payment data is shared with us</li>
             </ul>
             <p className="text-accent/80 mt-4">
               No other third-party SDKs, analytics tools, or advertising networks are used.
@@ -103,8 +116,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-3xl font-semibold mb-4 text-white">Contact</h2>
             <p className="text-accent/80">
               For privacy-related questions, please contact us at{" "}
-              <a href="mailto:support@dreamread.app" className="text-accent-blue hover:underline">
-                support@dreamread.app
+              <a href="mailto:hoperoina2016@gmail.com" className="text-accent-blue hover:underline">
+                hoperoina2016@gmail.com
               </a>
             </p>
           </section>

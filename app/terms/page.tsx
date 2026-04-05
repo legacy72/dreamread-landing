@@ -22,7 +22,7 @@ export default function TermsOfService() {
 
         <article className="prose prose-invert prose-lg max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Terms of Service</h1>
-          <p className="text-accent/60 mb-12">Last updated: March 6, 2025</p>
+          <p className="text-accent/60 mb-12">Last updated: April 4, 2026</p>
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Acceptance of Terms</h2>
@@ -62,6 +62,24 @@ export default function TermsOfService() {
           </section>
 
           <section className="mb-12">
+            <h2 className="text-3xl font-semibold mb-4 text-white">Subscriptions and Payments</h2>
+            <p className="text-accent/80 mb-4">
+              DreamRead offers optional auto-renewable subscriptions to unlock premium features such as Sleep Detection.
+            </p>
+            <ul className="text-accent/80 space-y-2 mb-4">
+              <li><strong className="text-white">Plans:</strong> Premium Monthly ($5.99/month) and Premium Annual ($34.99/year)</li>
+              <li><strong className="text-white">Free Trial:</strong> The annual plan includes a 7-day free trial. If you do not cancel before the trial ends, your subscription will automatically convert to a paid subscription</li>
+              <li><strong className="text-white">Billing:</strong> Payment is charged to your Apple ID account at confirmation of purchase, or at the end of the free trial period</li>
+              <li><strong className="text-white">Renewal:</strong> Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period</li>
+              <li><strong className="text-white">Cancellation:</strong> You can manage or cancel your subscription at any time through your Apple ID settings (Settings &rarr; Apple ID &rarr; Subscriptions)</li>
+              <li><strong className="text-white">Refunds:</strong> Refund requests are handled by Apple in accordance with their refund policy</li>
+            </ul>
+            <p className="text-accent/80">
+              Prices may vary by region and are subject to change. Any price changes will take effect at the start of the next billing cycle.
+            </p>
+          </section>
+
+          <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-white">Prohibited Use</h2>
             <ul className="text-accent/80 space-y-2">
               <li>You may not reverse engineer, decompile, or modify the app</li>
@@ -95,8 +113,8 @@ export default function TermsOfService() {
             <h2 className="text-3xl font-semibold mb-4 text-white">Contact</h2>
             <p className="text-accent/80">
               For questions about these Terms, please contact us at{" "}
-              <a href="mailto:support@dreamread.app" className="text-accent-blue hover:underline">
-                support@dreamread.app
+              <a href="mailto:hoperoina2016@gmail.com" className="text-accent-blue hover:underline">
+                hoperoina2016@gmail.com
               </a>
             </p>
           </section>

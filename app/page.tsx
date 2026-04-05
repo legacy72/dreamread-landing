@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
+import Pricing from "@/components/Pricing";
 import AppStoreButton from "@/components/AppStoreButton";
 import Footer from "@/components/Footer";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Features />
       <HowItWorks />
+      <Pricing />
 
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -17,7 +19,7 @@ export default function Home() {
             Ready to Transform Your Bedtime?
           </h2>
           <p className="text-xl text-accent/80 mb-12">
-            Join the waitlist and be the first to experience DreamRead
+            Download DreamRead and start listening tonight
           </p>
           <AppStoreButton />
         </div>

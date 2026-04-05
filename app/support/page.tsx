@@ -30,10 +30,10 @@ export default function Support() {
               Have a question, found a bug, or want to suggest a feature? Send us an email and we&apos;ll get back to you as soon as possible.
             </p>
             <a
-              href="mailto:support@dreamread.app"
+              href="mailto:hoperoina2016@gmail.com"
               className="inline-block bg-accent-blue text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
             >
-              support@dreamread.app
+              hoperoina2016@gmail.com
             </a>
           </section>
 
@@ -73,6 +73,27 @@ export default function Support() {
                 <h3 className="text-xl font-semibold mb-2 text-white">My progress wasn&apos;t saved</h3>
                 <p className="text-accent/80">
                   DreamRead saves your position automatically every few seconds during playback. If progress was lost, make sure the app wasn&apos;t force-quit during playback.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-white">What&apos;s included in Premium?</h3>
+                <p className="text-accent/80">
+                  Premium unlocks Sleep Detection via Apple Watch, advanced playback controls, extended listening stats (up to 365 days), sleep session quality info, and higher limits (100 books, 100 bookmarks, 20 folders). Plans: $5.99/month or $34.99/year with a 7-day free trial.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-white">How do I cancel my subscription?</h3>
+                <p className="text-accent/80">
+                  Open Settings on your iPhone &rarr; tap your Apple ID &rarr; Subscriptions &rarr; select DreamRead &rarr; Cancel Subscription. You&apos;ll keep access until the end of the current billing period.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-white">How do I restore my purchase?</h3>
+                <p className="text-accent/80">
+                  Open DreamRead &rarr; Settings &rarr; tap &quot;Restore Purchases&quot;. This is useful if you reinstalled the app or switched devices.
                 </p>
               </div>
             </div>

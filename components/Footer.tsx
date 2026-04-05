@@ -27,14 +27,21 @@ export default function Footer() {
             >
               Terms of Service
             </Link>
+            <span className="text-accent/40">|</span>
+            <Link
+              href="/support"
+              className="text-accent/80 hover:text-accent-blue transition-colors duration-200"
+            >
+              Support
+            </Link>
           </div>
 
           <div className="text-center md:text-right">
             <a
-              href="mailto:support@dreamread.app"
+              href="mailto:hoperoina2016@gmail.com"
               className="text-accent/80 hover:text-accent-blue transition-colors duration-200 text-sm"
             >
-              support@dreamread.app
+              hoperoina2016@gmail.com
             </a>
           </div>
         </div>
