@@ -1,23 +1,14 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
+
 export default function HowItWorks() {
+  const { t } = useLanguage();
+
   const steps = [
-    {
-      number: "1",
-      title: "Choose Your Audiobook",
-      description: "Import your own files or browse 15,000+ free books from LibriVox",
-      icon: "📚",
-    },
-    {
-      number: "2",
-      title: "Start Listening Before Bed",
-      description: "Put on your Apple Watch and start your audiobook",
-      icon: "🌙",
-    },
-    {
-      number: "3",
-      title: "Sleep Peacefully",
-      description: "We'll automatically pause when you fall asleep",
-      icon: "😴",
-    },
+    { number: "1", titleKey: "how.step1.title", descKey: "how.step1.desc", icon: "📚" },
+    { number: "2", titleKey: "how.step2.title", descKey: "how.step2.desc", icon: "🌙" },
+    { number: "3", titleKey: "how.step3.title", descKey: "how.step3.desc", icon: "😴" },
   ];
 
   return (
@@ -25,10 +16,10 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            How It Works
+            {t("how.title")}
           </h2>
           <p className="text-xl text-accent/80">
-            Three simple steps to better sleep
+            {t("how.subtitle")}
           </p>
         </div>
 
@@ -43,11 +34,11 @@ export default function HowItWorks() {
                 <div className="text-5xl mb-6">{step.icon}</div>
 
                 <h3 className="text-2xl font-semibold mb-4 text-white">
-                  {step.title}
+                  {t(step.titleKey)}
                 </h3>
 
                 <p className="text-accent/80 leading-relaxed">
-                  {step.description}
+                  {t(step.descKey)}
                 </p>
               </div>
 

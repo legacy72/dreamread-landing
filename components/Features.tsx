@@ -1,41 +1,17 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
+
 export default function Features() {
+  const { t } = useLanguage();
+
   const features = [
-    {
-      icon: "💤",
-      title: "Smart Sleep Detection",
-      description:
-        "Monitors your Apple Watch heart rate to automatically pause when you fall asleep",
-    },
-    {
-      icon: "⌚",
-      title: "Apple Watch Control",
-      description:
-        "Control playback and monitor your heart rate directly from your wrist",
-    },
-    {
-      icon: "🌙",
-      title: "Sleep Timer",
-      description:
-        "Set a 15, 30, 45, or 60-minute timer — audio fades out automatically",
-    },
-    {
-      icon: "📖",
-      title: "15,000+ Free Audiobooks",
-      description:
-        "Browse and listen to the built-in LibriVox catalog — no sign-up required",
-    },
-    {
-      icon: "🎧",
-      title: "All Popular Formats",
-      description:
-        "Import MP3, M4A, M4B, FLAC, WAV, AIFF, OGG, Opus, AWB files with automatic progress saving",
-    },
-    {
-      icon: "📊",
-      title: "Listening Stats",
-      description:
-        "Track your bedtime listening habits and sleep session quality over time",
-    },
+    { icon: "💤", titleKey: "features.sleep.title", descKey: "features.sleep.desc" },
+    { icon: "⌚", titleKey: "features.watch.title", descKey: "features.watch.desc" },
+    { icon: "🌙", titleKey: "features.timer.title", descKey: "features.timer.desc" },
+    { icon: "📖", titleKey: "features.catalog.title", descKey: "features.catalog.desc" },
+    { icon: "🎧", titleKey: "features.formats.title", descKey: "features.formats.desc" },
+    { icon: "📊", titleKey: "features.stats.title", descKey: "features.stats.desc" },
   ];
 
   return (
@@ -43,10 +19,10 @@ export default function Features() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Features
+            {t("features.title")}
           </h2>
           <p className="text-xl text-accent/80">
-            Everything you need for the perfect bedtime listening experience
+            {t("features.subtitle")}
           </p>
         </div>
 
@@ -60,10 +36,10 @@ export default function Features() {
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-white">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
               <p className="text-accent/80 leading-relaxed">
-                {feature.description}
+                {t(feature.descKey)}
               </p>
             </div>
           ))}

@@ -1,12 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Footer from "@/components/Footer";
-
-export const metadata = {
-  title: "Privacy Policy - DreamRead",
-  description: "Privacy Policy for DreamRead audiobook app",
-};
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function PrivacyPolicy() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
           <svg className="w-5 h-5 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M15 19l-7-7 7-7"></path>
           </svg>
-          Back to Home
+          {t("support.back")}
         </Link>
 
         <article className="prose prose-invert prose-lg max-w-none">

@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
@@ -6,6 +9,8 @@ import AppStoreButton from "@/components/AppStoreButton";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen">
       <Hero />
@@ -16,10 +21,10 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Bedtime?
+            {t("cta.title")}
           </h2>
           <p className="text-xl text-accent/80 mb-12">
-            Download DreamRead and start listening tonight
+            {t("cta.subtitle")}
           </p>
           <AppStoreButton />
         </div>

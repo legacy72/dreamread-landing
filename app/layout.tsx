@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -38,7 +40,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="antialiased">
-        {children}
+        <LanguageProvider>
+          <LanguageSwitcher />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

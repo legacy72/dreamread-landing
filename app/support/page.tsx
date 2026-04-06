@@ -1,12 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/lib/LanguageContext";
 
-export const metadata = {
-  title: "Support - DreamRead",
-  description: "Get help with DreamRead audiobook app",
-};
+const faqKeys = ["1", "2", "3", "4", "5", "6", "7", "8"] as const;
 
 export default function Support() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-16">
@@ -17,17 +19,17 @@ export default function Support() {
           <svg className="w-5 h-5 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M15 19l-7-7 7-7"></path>
           </svg>
-          Back to Home
+          {t("support.back")}
         </Link>
 
         <article className="prose prose-invert prose-lg max-w-none">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Support</h1>
-          <p className="text-accent/60 mb-12">We&apos;re here to help you get the most out of DreamRead.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{t("support.title")}</h1>
+          <p className="text-accent/60 mb-12">{t("support.subtitle")}</p>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Contact Us</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("support.contact.title")}</h2>
             <p className="text-accent/80 mb-4">
-              Have a question, found a bug, or want to suggest a feature? Send us an email and we&apos;ll get back to you as soon as possible.
+              {t("support.contact.desc")}
             </p>
             <a
               href="mailto:hoperoina2016@gmail.com"
@@ -38,72 +40,23 @@ export default function Support() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("support.faq.title")}</h2>
 
             <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Does Sleep Detection require Apple Watch?</h3>
-                <p className="text-accent/80">
-                  Yes, Sleep Detection uses heart rate data from Apple Watch. The audio player, library, and all other features work without Apple Watch.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">What audio formats are supported?</h3>
-                <p className="text-accent/80">
-                  DreamRead supports MP3, M4A, M4B, FLAC, WAV, AIFF, OGG, Opus, and AWB files.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">How do I import audiobooks?</h3>
-                <p className="text-accent/80">
-                  Tap the import button in the Library tab to open the Files app. You can import individual files or entire folders. DreamRead also includes a built-in catalog with 15,000+ free audiobooks via LibriVox.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Sleep Detection paused too early / didn&apos;t pause at all</h3>
-                <p className="text-accent/80">
-                  You can adjust the sensitivity threshold in Settings → Sleep Detection. Try a lower percentage (e.g. 6%) if the app doesn&apos;t detect sleep, or a higher one (e.g. 15%) if it triggers too early.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">My progress wasn&apos;t saved</h3>
-                <p className="text-accent/80">
-                  DreamRead saves your position automatically every few seconds during playback. If progress was lost, make sure the app wasn&apos;t force-quit during playback.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">What&apos;s included in Premium?</h3>
-                <p className="text-accent/80">
-                  Premium unlocks Sleep Detection via Apple Watch, advanced playback controls, unlimited listening stats, sleep session quality info, and unlimited books, bookmarks, and folders. Plans: $5.99/month or $34.99/year with a 7-day free trial.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">How do I cancel my subscription?</h3>
-                <p className="text-accent/80">
-                  Open Settings on your iPhone &rarr; tap your Apple ID &rarr; Subscriptions &rarr; select DreamRead &rarr; Cancel Subscription. You&apos;ll keep access until the end of the current billing period.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-white">How do I restore my purchase?</h3>
-                <p className="text-accent/80">
-                  Open DreamRead &rarr; Settings &rarr; tap &quot;Restore Purchases&quot;. This is useful if you reinstalled the app or switched devices.
-                </p>
-              </div>
+              {faqKeys.map((num) => (
+                <div key={num}>
+                  <h3 className="text-xl font-semibold mb-2 text-white">{t(`support.faq.q${num}`)}</h3>
+                  <p className="text-accent/80">{t(`support.faq.a${num}`)}</p>
+                </div>
+              ))}
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Privacy &amp; Legal</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("support.legal.title")}</h2>
             <div className="flex gap-6">
-              <Link href="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link>
-              <Link href="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>
+              <Link href="/privacy" className="text-accent-blue hover:underline">{t("footer.privacy")}</Link>
+              <Link href="/terms" className="text-accent-blue hover:underline">{t("footer.terms")}</Link>
             </div>
           </section>
         </article>
