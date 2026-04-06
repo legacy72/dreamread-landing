@@ -21,101 +21,85 @@ export default function PrivacyPolicy() {
         </Link>
 
         <article className="prose prose-invert prose-lg max-w-none">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Privacy Policy</h1>
-          <p className="text-accent/60 mb-12">Last updated: April 4, 2026</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{t("privacy.title")}</h1>
+          <p className="text-accent/60 mb-12">{t("privacy.updated")}</p>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Overview</h2>
-            <p className="text-accent/80">
-              DreamRead is designed with privacy in mind. We do not collect, transmit, or store your personal data on any external servers. All data remains on your device or in your personal iCloud account.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.overview.title")}</h2>
+            <p className="text-accent/80">{t("privacy.overview.text")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Health Data (HealthKit)</h2>
-            <p className="text-accent/80 mb-4">
-              DreamRead uses Apple HealthKit to read heart rate data from your Apple Watch for the Sleep Detection feature.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.health.title")}</h2>
+            <p className="text-accent/80 mb-4">{t("privacy.health.intro")}</p>
             <ul className="text-accent/80 space-y-2 mb-4">
-              <li>Heart rate data is processed entirely on your device in real time</li>
-              <li>Heart rate data is never stored, transmitted, or shared with any third party</li>
-              <li>Heart rate data is never used for advertising, marketing, or data broker purposes</li>
-              <li>Heart rate data is used solely to determine when to pause audio playback</li>
+              <li>{t("privacy.health.1")}</li>
+              <li>{t("privacy.health.2")}</li>
+              <li>{t("privacy.health.3")}</li>
+              <li>{t("privacy.health.4")}</li>
             </ul>
-            <p className="text-accent/80">
-              We do not use HealthKit data for any purpose other than providing Sleep Detection functionality within the app.
-            </p>
+            <p className="text-accent/80">{t("privacy.health.outro")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">User Content</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.content.title")}</h2>
             <ul className="text-accent/80 space-y-2">
-              <li>Audiobook files are stored locally on your device only</li>
-              <li>Playback progress and bookmarks are stored locally and optionally synced via your personal iCloud account</li>
-              <li>We have no access to your audiobook files or listening history</li>
+              <li>{t("privacy.content.1")}</li>
+              <li>{t("privacy.content.2")}</li>
+              <li>{t("privacy.content.3")}</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Data We Do Not Collect</h2>
-            <p className="text-accent/80 mb-4">DreamRead does not collect:</p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.nocollect.title")}</h2>
+            <p className="text-accent/80 mb-4">{t("privacy.nocollect.intro")}</p>
             <ul className="text-accent/80 space-y-2">
-              <li>Personal identifiers (name, email, phone number)</li>
-              <li>Location data</li>
-              <li>Health or fitness data beyond real-time heart rate processing</li>
-              <li>Usage analytics or crash reports sent to our servers</li>
+              <li>{t("privacy.nocollect.1")}</li>
+              <li>{t("privacy.nocollect.2")}</li>
+              <li>{t("privacy.nocollect.3")}</li>
+              <li>{t("privacy.nocollect.4")}</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Purchases and Subscriptions</h2>
-            <p className="text-accent/80 mb-4">
-              DreamRead offers optional in-app subscriptions processed entirely by Apple through the App Store.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.purchases.title")}</h2>
+            <p className="text-accent/80 mb-4">{t("privacy.purchases.intro")}</p>
             <ul className="text-accent/80 space-y-2">
-              <li>We do not collect, store, or have access to your payment information</li>
-              <li>All billing and transaction data is managed by Apple</li>
-              <li>We only receive a confirmation of your subscription status to unlock premium features</li>
+              <li>{t("privacy.purchases.1")}</li>
+              <li>{t("privacy.purchases.2")}</li>
+              <li>{t("privacy.purchases.3")}</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Third-Party Services</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.thirdparty.title")}</h2>
             <ul className="text-accent/80 space-y-2">
-              <li><strong className="text-white">Apple HealthKit</strong> — used to read heart rate data on-device only</li>
-              <li><strong className="text-white">Apple iCloud</strong> — used to sync your progress and bookmarks across your own devices (optional)</li>
-              <li><strong className="text-white">Apple StoreKit</strong> — used to process in-app subscriptions; no payment data is shared with us</li>
+              <li>{t("privacy.thirdparty.healthkit")}</li>
+              <li>{t("privacy.thirdparty.icloud")}</li>
+              <li>{t("privacy.thirdparty.storekit")}</li>
             </ul>
-            <p className="text-accent/80 mt-4">
-              No other third-party SDKs, analytics tools, or advertising networks are used.
-            </p>
+            <p className="text-accent/80 mt-4">{t("privacy.thirdparty.outro")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Data Retention</h2>
-            <p className="text-accent/80">
-              Since all data is stored locally on your device or in your personal iCloud, you can delete it at any time by removing the app or clearing iCloud data through iOS Settings.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.retention.title")}</h2>
+            <p className="text-accent/80">{t("privacy.retention.text")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Children&apos;s Privacy</h2>
-            <p className="text-accent/80">
-              DreamRead is not intended for children under the age of 13. We do not knowingly collect any information from children under 13.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.children.title")}</h2>
+            <p className="text-accent/80">{t("privacy.children.text")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Changes to This Policy</h2>
-            <p className="text-accent/80">
-              We may update this Privacy Policy from time to time. Any changes will be reflected by updating the date at the top of this page.
-            </p>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.changes.title")}</h2>
+            <p className="text-accent/80">{t("privacy.changes.text")}</p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold mb-4 text-white">Contact</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-white">{t("privacy.contact.title")}</h2>
             <p className="text-accent/80">
-              For privacy-related questions, please contact us at{" "}
+              {t("privacy.contact.text")}{" "}
               <a href="mailto:hoperoina2016@gmail.com" className="text-accent-blue hover:underline">
                 hoperoina2016@gmail.com
               </a>
