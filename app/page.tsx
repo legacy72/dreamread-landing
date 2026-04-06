@@ -18,12 +18,14 @@ export default function Home() {
       <HowItWorks />
       <Pricing />
 
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+      {/* Final CTA */}
+      <section className="py-16 px-6">
+        <div className="section-divider mb-12" />
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 text-text tracking-tight">
             {t("cta.title")}
           </h2>
-          <p className="text-xl text-accent/80 mb-12">
+          <p className="text-text-secondary text-base mb-10 max-w-xl mx-auto">
             {t("cta.subtitle")}
           </p>
           <AppStoreButton />

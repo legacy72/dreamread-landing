@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@next/swc-linux-arm64-gnu": "^16.2.2",
     "next": "^16.0.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

@@ -7,38 +7,48 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary-dark to-transparent opacity-50"></div>
+    <section className="min-h-[85vh] flex items-center justify-center px-6 pt-20 pb-12 relative overflow-hidden glow-top-right">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* Badge */}
+        <div className="animate-fadeInUp">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-accent-light bg-accent-glow border border-accent/20 mb-8">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            {t("hero.devices")}
+          </span>
+        </div>
 
-      <div className="max-w-6xl mx-auto text-center z-10">
-        <div className="animate-fadeIn">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-accent-blue to-white bg-clip-text text-transparent leading-tight">
-            {t("hero.title")}
+        {/* Title */}
+        <div className="animate-fadeInUp delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
+            <span className="gradient-text">{t("hero.title")}</span>
           </h1>
         </div>
 
-        <div className="animate-fadeIn delay-200">
-          <p className="text-xl md:text-2xl text-accent mb-12 max-w-3xl mx-auto leading-relaxed">
+        {/* Subtitle */}
+        <div className="animate-fadeInUp delay-200">
+          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
             {t("hero.subtitle")}
           </p>
         </div>
 
-        <div className="animate-fadeIn delay-400">
+        {/* CTA */}
+        <div className="animate-fadeInUp delay-300">
           <AppStoreButton />
         </div>
 
-        <div className="mt-16 animate-fadeIn delay-500">
-          <div className="inline-block p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-            <div className="text-8xl animate-float">📱⌚</div>
-            <p className="text-sm text-accent/70 mt-4">{t("hero.devices")}</p>
+        {/* Decorative device illustration */}
+        <div className="mt-16 animate-fadeInUp delay-400">
+          <div className="glass inline-flex flex-col items-center px-12 py-10 animate-float">
+            <div className="flex items-center gap-4 text-6xl mb-3">
+              <span className="opacity-90">📱</span>
+              <span className="text-2xl text-text-tertiary">+</span>
+              <span className="opacity-90">⌚</span>
+            </div>
+            <p className="text-xs text-text-tertiary font-medium tracking-wide uppercase">
+              iPhone &amp; Apple Watch
+            </p>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-accent-blue" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
       </div>
     </section>
   );
