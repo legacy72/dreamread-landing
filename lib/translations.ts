@@ -80,7 +80,6 @@ export const translations: AllTranslations = {
 
     // AppStoreButton
     "appstore.button": "Download on the App Store",
-    "appstore.soon": "Coming Soon",
 
     // Footer
     "footer.rights": "All rights reserved.",
@@ -265,7 +264,6 @@ export const translations: AllTranslations = {
 
     // AppStoreButton
     "appstore.button": "Скачать в App Store",
-    "appstore.soon": "Скоро",
 
     // Footer
     "footer.rights": "Все права защищены.",
