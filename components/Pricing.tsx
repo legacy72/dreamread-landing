@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Pricing() {
   const { t } = useLanguage();
+  const [isAnnual, setIsAnnual] = useState(true);
 
   const freeFeatures = [
     "pricing.free.f1", "pricing.free.f2", "pricing.free.f3", "pricing.free.f4",
@@ -21,7 +23,7 @@ export default function Pricing() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">
-            Pricing
+            {t("section.pricing")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text tracking-tight">
             {t("pricing.title")}
@@ -73,15 +75,35 @@ export default function Pricing() {
               </p>
             </div>
 
-            <div className="mb-1">
-              <span className="text-4xl font-bold text-text">{t("pricing.premium.price")}</span>
-              <span className="text-text-tertiary ml-2 text-sm">{t("pricing.premium.period")}</span>
+            {/* Plan toggle */}
+            <div className="flex items-center gap-1 mb-4 bg-bg-secondary/50 rounded-lg p-1 w-fit">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${!isAnnual ? "bg-accent/20 text-accent-light" : "text-text-tertiary hover:text-text-secondary"}`}
+              >
+                {t("pricing.toggle.monthly")}
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all flex items-center gap-1.5 ${isAnnual ? "bg-accent/20 text-accent-light" : "text-text-tertiary hover:text-text-secondary"}`}
+              >
+                {t("pricing.toggle.annual")}
+                <span className="text-[10px] bg-accent/30 text-accent-light px-1.5 py-0.5 rounded-full font-semibold">
+                  {t("pricing.premium.save")}
+                </span>
+              </button>
             </div>
-            <p className="text-accent-light text-xs mb-1 font-medium">
+
+            <div className="mb-1">
+              <span className="text-4xl font-bold text-text">
+                {isAnnual ? t("pricing.premium.price.annual") : t("pricing.premium.price.monthly")}
+              </span>
+              <span className="text-text-tertiary ml-2 text-sm">
+                {isAnnual ? t("pricing.premium.period.annual") : t("pricing.premium.period.monthly")}
+              </span>
+            </div>
+            <p className="text-accent-light text-xs mb-8 font-medium">
               {t("pricing.premium.trial")}
-            </p>
-            <p className="text-text-tertiary text-xs mb-8">
-              {t("pricing.premium.monthly")}
             </p>
 
             <ul className="space-y-3 mb-6">

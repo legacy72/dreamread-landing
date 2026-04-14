@@ -38,10 +38,10 @@ export default function Footer() {
           </div>
 
           <a
-            href="mailto:hoperoina2016@gmail.com"
+            href="mailto:support@dreamread.app"
             className="text-text-tertiary hover:text-accent transition-colors duration-200 text-xs"
           >
-            hoperoina2016@gmail.com
+            support@dreamread.app
           </a>
         </div>
       </div>

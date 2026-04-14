@@ -113,8 +113,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-lg font-semibold mb-3 text-text">{t("privacy.contact.title")}</h2>
             <p className="text-text-secondary text-sm leading-relaxed">
               {t("privacy.contact.text")}{" "}
-              <a href="mailto:hoperoina2016@gmail.com" className="text-accent hover:text-accent-light transition-colors duration-200">
-                hoperoina2016@gmail.com
+              <a href="mailto:support@dreamread.app" className="text-accent hover:text-accent-light transition-colors duration-200">
+                support@dreamread.app
               </a>
             </p>
           </div>
