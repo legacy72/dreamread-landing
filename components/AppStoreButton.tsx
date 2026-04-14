@@ -9,7 +9,7 @@ export default function AppStoreButton() {
 
   return (
     <a
-      href="https://apps.apple.com/us/app/dreamread-audiobook-player/id6761422972"
+      href="https://apps.apple.com/app/dreamread-audiobook-player/id6761422972"
       target="_blank"
       rel="noopener noreferrer"
       className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-white font-semibold text-sm rounded-xl transition-all duration-300 shadow-[0_4px_24px_rgba(108,99,255,0.25)] hover:shadow-[0_4px_32px_rgba(108,99,255,0.35)] hover:scale-105"

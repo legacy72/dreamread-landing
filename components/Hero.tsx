@@ -7,7 +7,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-[85vh] flex items-center justify-center px-6 pt-20 pb-12 relative overflow-hidden glow-top-right">
+    <section className="flex items-center justify-center px-6 pt-28 pb-20 relative overflow-hidden glow-top-right">
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge */}
         <div className="animate-fadeInUp">
@@ -35,23 +35,10 @@ export default function Hero() {
         <div className="animate-fadeInUp delay-300">
           <AppStoreButton />
           <p className="text-xs text-text-tertiary mt-4">
-            <span className="text-accent font-medium">Apple Watch required</span> for sleep detection • Core playback works without Apple Watch
+            <span className="text-accent font-medium">{t("hero.note.highlight")}</span> {t("hero.note.text")}
           </p>
         </div>
 
-        {/* Decorative device illustration */}
-        <div className="mt-16 animate-fadeInUp delay-400">
-          <div className="glass inline-flex flex-col items-center px-12 py-10 animate-float">
-            <div className="flex items-center gap-4 text-6xl mb-3">
-              <span className="opacity-90">📱</span>
-              <span className="text-2xl text-text-tertiary">+</span>
-              <span className="opacity-90">⌚</span>
-            </div>
-            <p className="text-xs text-text-tertiary font-medium tracking-wide uppercase">
-              iPhone &amp; Apple Watch
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
