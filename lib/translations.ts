@@ -114,7 +114,7 @@ export const translations: AllTranslations = {
 
     // Privacy Policy
     "privacy.title": "Privacy Policy",
-    "privacy.updated": "Last updated: April 4, 2026",
+    "privacy.updated": "Last updated: April 14, 2026",
     "privacy.overview.title": "Overview",
     "privacy.overview.text": "DreamRead is designed with privacy in mind. We do not collect, transmit, or store your personal data on any external servers. All data remains on your device or in your personal iCloud account.",
     "privacy.health.title": "Health Data (HealthKit)",
@@ -143,7 +143,14 @@ export const translations: AllTranslations = {
     "privacy.thirdparty.healthkit": "Apple HealthKit — used to read heart rate data on-device only",
     "privacy.thirdparty.icloud": "Apple iCloud — used to sync your progress and bookmarks across your own devices (optional)",
     "privacy.thirdparty.storekit": "Apple StoreKit — used to process in-app subscriptions; no payment data is shared with us",
-    "privacy.thirdparty.outro": "No other third-party SDKs, analytics tools, or advertising networks are used.",
+    "privacy.thirdparty.outro": "No other third-party SDKs or advertising networks are used in the mobile app.",
+
+    "privacy.analytics.title": "Web Analytics (Landing Page)",
+    "privacy.analytics.text": "Our landing page uses Google Analytics 4 to understand how visitors interact with the website. This helps us improve the user experience and optimize marketing campaigns.",
+    "privacy.analytics.1": "Google Analytics collects anonymous usage data such as page views, clicks, and referral sources",
+    "privacy.analytics.2": "We capture ad campaign parameters (gclid, gbraid, wbraid, utm_source, utm_campaign, utm_term) for attribution and conversion measurement",
+    "privacy.analytics.3": "No personal information (name, email, payment data) is sent to Google Analytics",
+    "privacy.analytics.4": "Data is subject to Google's Privacy Policy and is retained according to your Google account settings",
     "privacy.retention.title": "Data Retention",
     "privacy.retention.text": "Since all data is stored locally on your device or in your personal iCloud, you can delete it at any time by removing the app or clearing iCloud data through iOS Settings.",
     "privacy.children.title": "Children's Privacy",
@@ -298,7 +305,7 @@ export const translations: AllTranslations = {
 
     // Privacy Policy
     "privacy.title": "Политика конфиденциальности",
-    "privacy.updated": "Обновлено: 4 апреля 2026",
+    "privacy.updated": "Обновлено: 14 апреля 2026",
     "privacy.overview.title": "Общие сведения",
     "privacy.overview.text": "DreamRead создан с заботой о вашей приватности. Мы не собираем, не передаём и не храним ваши данные на внешних серверах. Вся информация остаётся на вашем устройстве или в вашем личном аккаунте iCloud.",
     "privacy.health.title": "Данные здоровья (HealthKit)",
@@ -327,7 +334,14 @@ export const translations: AllTranslations = {
     "privacy.thirdparty.healthkit": "Apple HealthKit — чтение данных пульса только на устройстве",
     "privacy.thirdparty.icloud": "Apple iCloud — синхронизация прогресса и закладок между вашими устройствами (по желанию)",
     "privacy.thirdparty.storekit": "Apple StoreKit — обработка подписок; платёжные данные нам не передаются",
-    "privacy.thirdparty.outro": "Никакие другие сторонние SDK, инструменты аналитики или рекламные сети не используются.",
+    "privacy.thirdparty.outro": "Никакие другие сторонние SDK или рекламные сети не используются в мобильном приложении.",
+
+    "privacy.analytics.title": "Веб-аналитика (Главная страница)",
+    "privacy.analytics.text": "Наша главная страница использует Google Analytics 4 для анализа взаимодействия посетителей с сайтом. Это помогает нам улучшить пользовательский опыт и оптимизировать маркетинговые кампании.",
+    "privacy.analytics.1": "Google Analytics собирает анонимные данные об использовании сайта, включая просмотры страниц, клики и источники перехода",
+    "privacy.analytics.2": "Мы собираем параметры рекламных кампаний (gclid, gbraid, wbraid, utm_source, utm_campaign, utm_term) для отслеживания конверсий",
+    "privacy.analytics.3": "Персональные данные (имя, email, платёжные данные) не отправляются в Google Analytics",
+    "privacy.analytics.4": "Данные подлежат политике конфиденциальности Google и хранятся в соответствии с настройками вашего аккаунта Google",
     "privacy.retention.title": "Хранение данных",
     "privacy.retention.text": "Все данные хранятся локально на вашем устройстве или в вашем личном iCloud. Вы можете удалить их в любой момент, удалив приложение или очистив данные iCloud в настройках iOS.",
     "privacy.children.title": "Конфиденциальность детей",

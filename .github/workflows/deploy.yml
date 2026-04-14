@@ -32,8 +32,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /dreamread-landing
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

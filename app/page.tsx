@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
+import { useAnalyticsInit } from "@/lib/useAnalytics";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
@@ -10,6 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const { t } = useLanguage();
+  useAnalyticsInit();
 
   return (
     <main className="min-h-screen">

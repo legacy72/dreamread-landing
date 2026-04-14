@@ -84,6 +84,17 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="glass p-8">
+            <h2 className="text-lg font-semibold mb-3 text-text">{t("privacy.analytics.title")}</h2>
+            <p className="text-text-secondary text-sm leading-relaxed mb-4">{t("privacy.analytics.text")}</p>
+            <ul className="text-text-secondary text-sm leading-relaxed space-y-2">
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.analytics.1")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.analytics.2")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.analytics.3")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.analytics.4")}</li>
+            </ul>
+          </div>
+
+          <div className="glass p-8">
             <h2 className="text-lg font-semibold mb-3 text-text">{t("privacy.retention.title")}</h2>
             <p className="text-text-secondary text-sm leading-relaxed">{t("privacy.retention.text")}</p>
           </div>

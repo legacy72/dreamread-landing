@@ -34,6 +34,9 @@ export default function Hero() {
         {/* CTA */}
         <div className="animate-fadeInUp delay-300">
           <AppStoreButton />
+          <p className="text-xs text-text-tertiary mt-4">
+            <span className="text-accent font-medium">Apple Watch required</span> for sleep detection • Core playback works without Apple Watch
+          </p>
         </div>
 
         {/* Decorative device illustration */}
