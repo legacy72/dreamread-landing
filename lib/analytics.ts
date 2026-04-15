@@ -117,6 +117,12 @@ export function firePageViewEvent(): void {
 }
 
 /**
+ * Google Ads conversion send_to value for App Store click conversion action.
+ * Configured in Google Ads account 969-403-5382, conversion "App Store Click".
+ */
+const GOOGLE_ADS_APP_STORE_CLICK_SEND_TO = "AW-16934994769/Cth2CNfyxJwcENGGnos_";
+
+/**
  * Fire app_store_click event with ad params
  */
 export function fireAppStoreClickEvent(): void {
@@ -138,7 +144,13 @@ export function fireAppStoreClickEvent(): void {
     if (adParams.utm_term) eventData.utm_term = adParams.utm_term;
   }
 
+  // GA4 event for analytics
   gtag("event", "app_store_click", eventData);
+
+  // Google Ads conversion event for ad attribution / bidding optimization
+  gtag("event", "conversion", {
+    send_to: GOOGLE_ADS_APP_STORE_CLICK_SEND_TO,
+  });
 }
 
 /**
