@@ -100,7 +100,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 + Google Ads */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQJ7WGW3SE"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -108,6 +108,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-FQJ7WGW3SE');
+            gtag('config', 'AW-16934994769');
           `
         }} />
       </head>
