@@ -3,22 +3,12 @@
  * Captures ad params (gclid, gbraid, wbraid, utm_*) and fires events
  */
 
-interface UrlParams {
-  gclid?: string;
-  gbraid?: string;
-  wbraid?: string;
-  utm_source?: string;
-  utm_campaign?: string;
-  utm_term?: string;
-}
+import {
+  resolveAppStoreCampaignToken,
+  type AppStoreAttributionParams,
+} from "./appStore";
 
-interface StoredAdParams {
-  gclid?: string;
-  gbraid?: string;
-  wbraid?: string;
-  utm_source?: string;
-  utm_campaign?: string;
-  utm_term?: string;
+interface StoredAdParams extends AppStoreAttributionParams {
   timestamp: number;
 }
 
@@ -28,11 +18,11 @@ const AD_PARAMS_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
 /**
  * Extract ad attribution params from URL
  */
-export function extractAdParams(): UrlParams {
+export function extractAdParams(): AppStoreAttributionParams {
   if (typeof window === "undefined") return {};
 
   const params = new URLSearchParams(window.location.search);
-  const adParams: UrlParams = {};
+  const adParams: AppStoreAttributionParams = {};
 
   const keys = ["gclid", "gbraid", "wbraid", "utm_source", "utm_campaign", "utm_term"] as const;
   for (const key of keys) {
@@ -48,7 +38,7 @@ export function extractAdParams(): UrlParams {
 /**
  * Store ad params in localStorage on first visit
  */
-export function storeAdParams(params: UrlParams): void {
+export function storeAdParams(params: AppStoreAttributionParams): void {
   if (typeof window === "undefined" || Object.keys(params).length === 0) return;
 
   const stored: StoredAdParams = {
@@ -66,7 +56,7 @@ export function storeAdParams(params: UrlParams): void {
 /**
  * Retrieve stored ad params if still valid
  */
-export function getStoredAdParams(): UrlParams | null {
+export function getStoredAdParams(): AppStoreAttributionParams | null {
   if (typeof window === "undefined") return null;
 
   try {
@@ -125,14 +115,18 @@ const GOOGLE_ADS_APP_STORE_CLICK_SEND_TO = "AW-16934994769/Cth2CNfyxJwcENGGnos_"
 /**
  * Fire app_store_click event with ad params
  */
-export function fireAppStoreClickEvent(): void {
+export function fireAppStoreClickEvent(ctaSource?: string): void {
   if (typeof window === "undefined" || !("gtag" in window)) return;
 
   const gtag = (window as any).gtag as Function;
-  const adParams = getStoredAdParams();
+  const urlParams = extractAdParams();
+  const adParams =
+    Object.keys(urlParams).length > 0 ? urlParams : getStoredAdParams();
+  const campaignToken = resolveAppStoreCampaignToken(adParams);
 
   const eventData: Record<string, any> = {
     event: "app_store_click",
+    campaign_token: campaignToken,
   };
 
   if (adParams) {
@@ -142,6 +136,10 @@ export function fireAppStoreClickEvent(): void {
     if (adParams.utm_source) eventData.utm_source = adParams.utm_source;
     if (adParams.utm_campaign) eventData.utm_campaign = adParams.utm_campaign;
     if (adParams.utm_term) eventData.utm_term = adParams.utm_term;
+  }
+
+  if (ctaSource) {
+    eventData.cta_source = ctaSource;
   }
 
   // GA4 event for analytics

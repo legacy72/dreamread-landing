@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "DreamRead - Audiobooks That Pause When You Sleep",
-  description: "Fall asleep to your favorite audiobooks. DreamRead uses Apple Watch to detect when you drift off and automatically pauses playback. Free audiobook catalog included.",
+  description: "Fall asleep to your favorite audiobooks. DreamRead uses Apple Watch to detect when you drift off and automatically pauses playback. Sleep detection requires Apple Watch; core playback works without it.",
   keywords: [
     "audiobook", "audiobook player", "sleep", "apple watch", "ios",
     "sleep detection", "bedtime audiobook", "audiobook sleep timer",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     title: "DreamRead — Audiobooks That Pause When You Sleep",
-    description: "Fall asleep to your favorite audiobooks. DreamRead uses Apple Watch to detect when you drift off and automatically pauses playback.",
+    description: "Fall asleep to your favorite audiobooks. Sleep detection requires Apple Watch; core playback works without it.",
     type: "website",
     locale: "en_US",
     siteName: "DreamRead",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "DreamRead — Audiobooks That Pause When You Sleep",
-    description: "Fall asleep to your favorite audiobooks. DreamRead uses Apple Watch to detect when you drift off and automatically pauses playback.",
+    description: "Fall asleep to your favorite audiobooks. Sleep detection requires Apple Watch; core playback works without it.",
     images: ["https://dreamread.app/og-image.png"],
   },
 };
@@ -57,10 +57,10 @@ const jsonLd = {
   "name": "DreamRead",
   "operatingSystem": "iOS",
   "applicationCategory": "EntertainmentApplication",
-  "description": "Audiobook player with Apple Watch sleep detection. Automatically pauses when you fall asleep.",
+  "description": "Audiobook player with Apple Watch sleep detection. Sleep detection requires Apple Watch; core playback works without it.",
   "url": "https://dreamread.app",
   "downloadUrl": "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972",
-  "softwareVersion": "1.2.0",
+  "softwareVersion": "1.5.0",
   "author": {
     "@type": "Organization",
     "name": "DreamRead"
@@ -74,18 +74,12 @@ const jsonLd = {
     },
     {
       "@type": "Offer",
-      "price": "34.99",
+      "price": "39.99",
       "priceCurrency": "USD",
       "billingIncrement": "P1Y",
       "description": "Premium annual subscription"
     }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "127",
-    "bestRating": "5"
-  }
+  ]
 };
 
 export default function RootLayout({

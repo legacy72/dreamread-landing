@@ -1,27 +1,40 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { buildAppStoreUrl, getDefaultAppStoreUrl } from "@/lib/appStore";
+import { extractAdParams, getStoredAdParams } from "@/lib/analytics";
 import { useAppStoreClick } from "@/lib/useAnalytics";
 
 interface AppStoreButtonProps {
   variant?: "primary" | "ghost";
   label?: string;
   className?: string;
+  analyticsSource?: string;
 }
 
 export default function AppStoreButton({
   variant = "primary",
   label,
   className,
+  analyticsSource = "app_store_button",
 }: AppStoreButtonProps) {
   const { t } = useLanguage();
-  const handleAppStoreClick = useAppStoreClick();
+  const [appStoreUrl, setAppStoreUrl] = useState(getDefaultAppStoreUrl());
+  const handleAppStoreClick = useAppStoreClick(analyticsSource);
   const text = label ?? t("appstore.button");
   const cls = variant === "ghost" ? "btn-ghost" : "btn-primary";
 
+  useEffect(() => {
+    const urlParams = extractAdParams();
+    const params =
+      Object.keys(urlParams).length > 0 ? urlParams : getStoredAdParams();
+    setAppStoreUrl(buildAppStoreUrl(params));
+  }, []);
+
   return (
     <a
-      href="https://apps.apple.com/app/dreamread-audiobook-player/id6761422972?ct=landing_organic&mt=8"
+      href={appStoreUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={`${cls} ${className ?? ""}`.trim()}

@@ -1,15 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
-import { useAppStoreClick } from "@/lib/useAnalytics";
+import AppStoreButton from "./AppStoreButton";
 import LanguageSwitcher from "./LanguageSwitcher";
-
-const APP_STORE_URL =
-  "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972?ct=landing_organic&mt=8";
 
 export default function Nav() {
   const { t } = useLanguage();
-  const handleAppStoreClick = useAppStoreClick();
 
   return (
     <nav className="flex items-center justify-between gap-4 px-6 md:px-14 py-6 md:py-7 border-b border-[rgba(239,231,216,0.08)]">
@@ -43,17 +39,11 @@ export default function Nav() {
 
       <div className="flex items-center gap-3">
         <LanguageSwitcher />
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleAppStoreClick}
-          className="btn-primary"
-          style={{ padding: "10px 18px", fontSize: 12 }}
-          aria-label={t("nav.openapp")}
-        >
-          {t("nav.openapp")}
-        </a>
+        <AppStoreButton
+          label={t("nav.openapp")}
+          className="!px-[18px] !py-[10px] !text-[12px]"
+          analyticsSource="nav"
+        />
       </div>
     </nav>
   );

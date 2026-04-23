@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
-import { useAppStoreClick } from "@/lib/useAnalytics";
+import AppStoreButton from "./AppStoreButton";
 
 const FREE_FEATURES = [
   "pricing.free.f1",
@@ -24,11 +24,7 @@ const PREMIUM_FEATURES = [
 
 export default function Pricing() {
   const { t } = useLanguage();
-  const handleAppStoreClick = useAppStoreClick();
   const [isAnnual, setIsAnnual] = useState(true);
-
-  const appStoreLink =
-    "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972?ct=landing_organic&mt=8";
 
   return (
     <section
@@ -84,16 +80,12 @@ export default function Pricing() {
             ))}
           </ul>
 
-          <a
-            href={appStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleAppStoreClick}
-            className="btn-ghost w-full"
-            style={{ width: "100%" }}
-          >
-            {t("pricing.free.cta")}
-          </a>
+          <AppStoreButton
+            variant="ghost"
+            analyticsSource="pricing_free"
+            className="w-full"
+            label={t("pricing.free.cta")}
+          />
           <div className="mt-3.5 text-[11px] text-[rgba(239,231,216,0.42)] text-center">
             {t("pricing.free.note")}
           </div>
@@ -171,16 +163,11 @@ export default function Pricing() {
             ))}
           </ul>
 
-          <a
-            href={appStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleAppStoreClick}
-            className="btn-primary w-full"
-            style={{ width: "100%" }}
-          >
-            {t("pricing.premium.cta")}
-          </a>
+          <AppStoreButton
+            analyticsSource="pricing_premium"
+            className="w-full"
+            label={t("pricing.premium.cta")}
+          />
           <div className="mt-3.5 text-[11px] text-[rgba(239,231,216,0.42)] text-center">
             {isAnnual
               ? t("pricing.premium.note.annual")

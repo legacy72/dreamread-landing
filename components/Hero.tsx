@@ -28,8 +28,16 @@ export default function Hero() {
         <p className="mt-6 text-[16px] md:text-[17px] leading-[1.6] text-[rgba(239,231,216,0.62)] max-w-[440px]">
           {t("hero.subtitle")}
         </p>
+        <div className="mt-5 flex flex-wrap gap-2 max-w-[560px]">
+          <span className="meta-mono px-3 py-1.5 border border-[rgba(201,122,74,0.32)] text-[#efe7d8] bg-[rgba(201,122,74,0.08)]">
+            {t("hero.qualifier.primary")}
+          </span>
+          <span className="meta-mono px-3 py-1.5 border border-[rgba(239,231,216,0.12)] text-[rgba(239,231,216,0.72)] bg-[rgba(239,231,216,0.03)]">
+            {t("hero.qualifier.secondary")}
+          </span>
+        </div>
         <div className="flex flex-wrap gap-3 mt-8">
-          <AppStoreButton label={t("hero.primary")} />
+          <AppStoreButton label={t("hero.primary")} analyticsSource="hero" />
           <a href="#features" className="btn-ghost">
             {t("hero.ghost")}
           </a>

@@ -15,8 +15,8 @@ export function useAnalyticsInit(): void {
 /**
  * Fire app store click event
  */
-export function useAppStoreClick(): () => void {
+export function useAppStoreClick(source?: string): () => void {
   return () => {
-    fireAppStoreClickEvent();
+    fireAppStoreClickEvent(source);
   };
 }
