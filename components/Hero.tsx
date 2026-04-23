@@ -2,50 +2,85 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import AppStoreButton from "./AppStoreButton";
-import PhoneMockup from "./PhoneMockup";
 
 export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="flex items-center justify-center px-6 pt-24 pb-16 md:pt-28 md:pb-20 relative overflow-hidden glow-top-right">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-        {/* Left side: text content */}
-        <div className="flex-1 text-center md:text-left">
-          {/* Badge */}
-          <div className="animate-fadeInUp">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-accent-light bg-accent-glow border border-accent/20 mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              {t("hero.devices")}
-            </span>
-          </div>
-
-          {/* Title */}
-          <div className="animate-fadeInUp delay-100">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
-              <span className="gradient-text">{t("hero.title")}</span>
-            </h1>
-          </div>
-
-          {/* Subtitle */}
-          <div className="animate-fadeInUp delay-200">
-            <p className="text-lg md:text-xl text-text-secondary max-w-lg mx-auto md:mx-0 leading-relaxed mb-10">
-              {t("hero.subtitle")}
-            </p>
-          </div>
-
-          {/* CTA */}
-          <div className="animate-fadeInUp delay-300">
-            <AppStoreButton />
-            <p className="text-xs text-text-tertiary mt-4">
-              <span className="text-accent font-medium">{t("hero.note.highlight")}</span> {t("hero.note.text")}
-            </p>
-          </div>
+    <section
+      id="top"
+      className="px-6 md:px-14 py-16 md:py-24 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-center max-w-[1400px] mx-auto"
+    >
+      {/* Left — copy */}
+      <div className="animate-fadeInUp">
+        <p
+          className="eyebrow text-[#c97a4a] mb-5"
+          style={{ letterSpacing: "3px" }}
+        >
+          {t("hero.eyebrow")}
+        </p>
+        <h1 className="font-display text-[44px] sm:text-[56px] md:text-[72px] lg:text-[76px] font-normal leading-[0.96] tracking-[-2px] md:tracking-[-2.5px] m-0">
+          {t("hero.title.a")}
+          <br />
+          {t("hero.title.b")}
+          <em className="italic text-[#c97a4a]">{t("hero.title.c")}</em>
+        </h1>
+        <p className="mt-6 text-[16px] md:text-[17px] leading-[1.6] text-[rgba(239,231,216,0.62)] max-w-[440px]">
+          {t("hero.subtitle")}
+        </p>
+        <div className="flex flex-wrap gap-3 mt-8">
+          <AppStoreButton label={t("hero.primary")} />
+          <a href="#features" className="btn-ghost">
+            {t("hero.ghost")}
+          </a>
         </div>
+        <p className="mt-6 meta-mono text-[rgba(239,231,216,0.42)]">
+          {t("hero.footnote")}
+        </p>
+      </div>
 
-        {/* Right side: phone mockup */}
-        <div className="animate-fadeInUp delay-400 flex-shrink-0 hidden md:block">
-          <PhoneMockup width={280} />
+      {/* Right — paper card */}
+      <div className="relative flex items-center justify-center min-h-[380px] md:min-h-[480px] animate-fadeInUp delay-200">
+        <div className="hero-stamp">{t("herocard.stamp")}</div>
+        <div className="hero-card">
+          <div
+            className="flex justify-between mb-9"
+            style={{
+              fontSize: 9,
+              letterSpacing: "2.4px",
+              textTransform: "uppercase",
+              color: "#8a7b5f",
+              fontWeight: 700,
+            }}
+          >
+            <span>{t("herocard.cap.left")}</span>
+            <span>{t("herocard.cap.right")}</span>
+          </div>
+          <blockquote
+            className="font-display m-0 mb-7"
+            style={{
+              fontSize: "22px",
+              fontWeight: 400,
+              lineHeight: 1.45,
+              letterSpacing: "0.1px",
+              color: "#2b261c",
+            }}
+          >
+            <em style={{ color: "#b8692f", fontStyle: "normal" }}>&ldquo;</em>
+            {t("herocard.quote")}
+            <em style={{ color: "#b8692f", fontStyle: "normal" }}>&rdquo;</em>
+          </blockquote>
+          <div
+            className="flex justify-between"
+            style={{
+              fontFamily: "SF Mono, monospace",
+              fontSize: 10,
+              color: "#8a7b5f",
+            }}
+          >
+            <span>{t("herocard.meta.left")}</span>
+            <span>{t("herocard.meta.right")}</span>
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const faqKeys = ["1", "2", "3", "4", "5", "6", "7", "8"] as const;
@@ -12,15 +13,18 @@ export default function Support() {
   return (
     <main className="min-h-screen">
       <div className="max-w-3xl mx-auto px-6 py-20">
-        <Link
-          href="/"
-          className="inline-flex items-center text-text-tertiary hover:text-accent text-sm gap-2 mb-10 transition-colors duration-200"
-        >
-          <svg className="w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M15 19l-7-7 7-7"></path>
-          </svg>
-          {t("support.back")}
-        </Link>
+        <div className="flex items-center justify-between mb-10">
+          <Link
+            href="/"
+            className="inline-flex items-center text-text-tertiary hover:text-accent text-sm gap-2 transition-colors duration-200"
+          >
+            <svg className="w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M15 19l-7-7 7-7"></path>
+            </svg>
+            {t("support.back")}
+          </Link>
+          <LanguageSwitcher />
+        </div>
 
         <div className="mb-14">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-text tracking-tight">{t("support.title")}</h1>

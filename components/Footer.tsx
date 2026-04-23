@@ -5,45 +5,40 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-10 px-6">
-      <div className="section-divider mb-8" />
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-5">
-          <p className="text-text-tertiary text-xs">
-            &copy; {currentYear} DreamRead. {t("footer.rights")}
-          </p>
+    <footer className="px-6 md:px-14 pt-10 pb-6 border-t border-[rgba(239,231,216,0.08)]">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-semibold tracking-[1.6px] uppercase text-[rgba(239,231,216,0.42)]">
+        <span>{t("footer.left")}</span>
 
-          <div className="flex flex-wrap justify-center gap-5 text-xs">
-            <Link
-              href="/privacy"
-              className="text-text-tertiary hover:text-accent transition-colors duration-200"
-            >
-              {t("footer.privacy")}
-            </Link>
-            <Link
-              href="/terms"
-              className="text-text-tertiary hover:text-accent transition-colors duration-200"
-            >
-              {t("footer.terms")}
-            </Link>
-            <Link
-              href="/support"
-              className="text-text-tertiary hover:text-accent transition-colors duration-200"
-            >
-              {t("footer.support")}
-            </Link>
-          </div>
-
-          <a
-            href="mailto:support@dreamread.app"
-            className="text-text-tertiary hover:text-accent transition-colors duration-200 text-xs"
+        <div className="flex flex-wrap justify-center gap-5">
+          <Link
+            href="/privacy"
+            className="hover:text-[#c97a4a] transition-colors"
           >
-            support@dreamread.app
-          </a>
+            {t("footer.privacy")}
+          </Link>
+          <Link
+            href="/terms"
+            className="hover:text-[#c97a4a] transition-colors"
+          >
+            {t("footer.terms")}
+          </Link>
+          <Link
+            href="/support"
+            className="hover:text-[#c97a4a] transition-colors"
+          >
+            {t("footer.support")}
+          </Link>
         </div>
+
+        <a
+          href="mailto:support@dreamread.app"
+          className="normal-case tracking-normal hover:text-[#c97a4a] transition-colors"
+          style={{ letterSpacing: 0, textTransform: "none" }}
+        >
+          support@dreamread.app
+        </a>
       </div>
     </footer>
   );

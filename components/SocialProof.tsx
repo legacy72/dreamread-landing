@@ -2,56 +2,101 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 
+interface Review {
+  srcKey: string;
+  textKey: string;
+  authorKey: string;
+  detailKey: string;
+}
+
+const REVIEWS: Review[] = [
+  {
+    srcKey: "social.review1.src",
+    textKey: "social.review1.text",
+    authorKey: "social.review1.author",
+    detailKey: "social.review1.detail",
+  },
+  {
+    srcKey: "social.review2.src",
+    textKey: "social.review2.text",
+    authorKey: "social.review2.author",
+    detailKey: "social.review2.detail",
+  },
+  {
+    srcKey: "social.review3.src",
+    textKey: "social.review3.text",
+    authorKey: "social.review3.author",
+    detailKey: "social.review3.detail",
+  },
+];
+
+const STATS = [
+  { n: "stat.1.n", l: "stat.1.l" },
+  { n: "stat.2.n", l: "stat.2.l" },
+  { n: "stat.3.n", l: "stat.3.l" },
+  { n: "stat.4.n", l: "stat.4.l" },
+];
+
 export default function SocialProof() {
   const { t } = useLanguage();
 
-  const reviews = [
-    { textKey: "social.review1.text", authorKey: "social.review1.author", detailKey: "social.review1.detail" },
-    { textKey: "social.review2.text", authorKey: "social.review2.author", detailKey: "social.review2.detail" },
-    { textKey: "social.review3.text", authorKey: "social.review3.author", detailKey: "social.review3.detail" },
-  ];
-
   return (
-    <section className="py-16 px-6">
-      <div className="section-divider mb-12" />
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          {/* Star rating */}
-          <div className="flex items-center justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-6 h-6 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-            <span className="ml-2 text-text font-semibold text-lg">{t("social.rating")}</span>
-          </div>
-          <p className="text-text-tertiary text-sm">{t("social.ratingLabel")}</p>
+    <section
+      className="px-6 md:px-14 py-24 border-t border-[rgba(239,231,216,0.08)] max-w-[1400px] mx-auto"
+      style={{ background: "rgba(232,223,204,0.015)" }}
+    >
+      <div className="flex justify-between items-baseline pb-6 mb-14 border-b border-[rgba(239,231,216,0.16)] gap-4 flex-wrap">
+        <h2 className="font-display text-[32px] md:text-[40px] font-normal tracking-[-1.2px] leading-[1] m-0">
+          {t("social.h2.a")}
+          <em className="italic text-[#c97a4a]">{t("social.h2.b")}</em>
+        </h2>
+        <div className="meta-mono text-[rgba(239,231,216,0.42)]">
+          {t("social.meta")}
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {reviews.map((review, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        {REVIEWS.map((r, i) => (
+          <div key={i} className="border-t border-[#efe7d8] pt-5">
             <div
-              key={index}
-              className="glass p-6 transition-all duration-300 glass-hover"
+              className="meta-mono text-[rgba(239,231,216,0.42)] mb-4"
+              style={{ letterSpacing: "2.2px" }}
             >
-              {/* Quote */}
-              <p className="text-text-secondary text-sm leading-relaxed mb-5" style={{ fontStyle: "oblique 6deg" }}>
-                &ldquo;{t(review.textKey)}&rdquo;
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-accent/15 border border-accent/20 flex items-center justify-center text-accent font-semibold text-sm">
-                  {t(review.authorKey).charAt(0)}
-                </div>
-                <div>
-                  <p className="text-text text-sm font-medium">{t(review.authorKey)}</p>
-                  <p className="text-text-tertiary text-xs">{t(review.detailKey)}</p>
-                </div>
-              </div>
+              {t(r.srcKey)}
             </div>
-          ))}
-        </div>
+            <blockquote className="font-display italic text-[20px] md:text-[22px] font-normal leading-[1.35] m-0 mb-5 text-[#efe7d8] tracking-[-0.2px]">
+              &ldquo;{t(r.textKey)}&rdquo;
+            </blockquote>
+            <div className="text-[11px] text-[rgba(239,231,216,0.62)]">
+              <strong className="text-[#efe7d8] font-semibold">
+                {t(r.authorKey)}
+              </strong>{" "}
+              · {t(r.detailKey)}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-b border-[rgba(239,231,216,0.16)]">
+        {STATS.map((s, i) => (
+          <div
+            key={i}
+            className="py-7 px-4 text-center"
+            style={{
+              borderRight:
+                i === STATS.length - 1
+                  ? "none"
+                  : "0.5px solid rgba(239,231,216,0.16)",
+            }}
+          >
+            <div className="font-display text-[40px] md:text-[48px] font-normal tracking-[-1.4px] leading-[1] text-[#c97a4a]">
+              {t(s.n)}
+            </div>
+            <div className="meta-mono text-[rgba(239,231,216,0.42)] mt-2">
+              {t(s.l)}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

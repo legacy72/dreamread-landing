@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a0a1a",
+  themeColor: "#15161b",
 };
 
 export const metadata: Metadata = {
@@ -19,6 +18,15 @@ export const metadata: Metadata = {
     "librivox", "free audiobooks", "m4b player", "audiobook app iphone"
   ],
   authors: [{ name: "DreamRead" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "DreamRead — Audiobooks That Pause When You Sleep",
     description: "Fall asleep to your favorite audiobooks. DreamRead uses Apple Watch to detect when you drift off and automatically pauses playback.",
@@ -88,11 +96,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -114,7 +120,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <LanguageProvider>
-          <LanguageSwitcher />
           {children}
         </LanguageProvider>
       </body>

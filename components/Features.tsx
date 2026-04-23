@@ -2,53 +2,59 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 
+interface Feature {
+  num: string;
+  titleKey: string;
+  descKey: string;
+}
+
+const FEATURES: Feature[] = [
+  { num: "I.", titleKey: "features.sleep.title", descKey: "features.sleep.desc" },
+  { num: "II.", titleKey: "features.resume.title", descKey: "features.resume.desc" },
+  { num: "III.", titleKey: "features.catalog.title", descKey: "features.catalog.desc" },
+  { num: "IV.", titleKey: "features.controls.title", descKey: "features.controls.desc" },
+  { num: "V.", titleKey: "features.formats.title", descKey: "features.formats.desc" },
+  { num: "VI.", titleKey: "features.nofeed.title", descKey: "features.nofeed.desc" },
+];
+
 export default function Features() {
   const { t } = useLanguage();
 
-  const features = [
-    { icon: "💤", titleKey: "features.sleep.title", descKey: "features.sleep.desc" },
-    { icon: "⌚", titleKey: "features.watch.title", descKey: "features.watch.desc" },
-    { icon: "🌙", titleKey: "features.timer.title", descKey: "features.timer.desc" },
-    { icon: "📖", titleKey: "features.catalog.title", descKey: "features.catalog.desc" },
-    { icon: "🎧", titleKey: "features.formats.title", descKey: "features.formats.desc" },
-    { icon: "📊", titleKey: "features.stats.title", descKey: "features.stats.desc" },
-  ];
-
   return (
-    <section className="py-16 px-6">
-      <div className="section-divider mb-12" />
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">
-            {t("section.features")}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text tracking-tight">
-            {t("features.title")}
-          </h2>
-          <p className="text-text-secondary text-base max-w-xl mx-auto">
-            {t("features.subtitle")}
-          </p>
-        </div>
+    <section
+      id="features"
+      className="px-6 md:px-14 py-20 md:py-24 border-t border-[rgba(239,231,216,0.08)] max-w-[1400px] mx-auto"
+    >
+      <h2 className="font-display text-[36px] md:text-[56px] font-normal tracking-[-1.6px] leading-[1] m-0 mb-14 max-w-[780px]">
+        {t("features.h2.a")}
+        <br />
+        {t("features.h2.b")}
+        <em className="italic text-[#c97a4a]">{t("features.h2.c")}</em>
+      </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="glass glass-hover p-7 transition-all duration-300 group cursor-default"
-              style={{ animationDelay: `${index * 0.08}s` }}
-            >
-              <div className="icon-wrap mb-5 group-hover:scale-105 transition-transform duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-text">
-                {t(feature.titleKey)}
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                {t(feature.descKey)}
-              </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-[rgba(239,231,216,0.16)]">
+        {FEATURES.map((f, i) => (
+          <div
+            key={f.num}
+            className="px-7 py-9 border-b border-[rgba(239,231,216,0.16)]"
+            style={{
+              borderRight:
+                (i + 1) % 3 === 0
+                  ? "none"
+                  : "0.5px solid rgba(239,231,216,0.16)",
+            }}
+          >
+            <div className="meta-mono text-[rgba(239,231,216,0.42)] mb-4">
+              {f.num}
             </div>
-          ))}
-        </div>
+            <h3 className="font-display text-[22px] font-medium tracking-[-0.3px] m-0 mb-2.5 text-[#efe7d8]">
+              {t(f.titleKey)}
+            </h3>
+            <p className="text-[13px] leading-[1.6] text-[rgba(239,231,216,0.62)] m-0">
+              {t(f.descKey)}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
