@@ -201,10 +201,10 @@ export const translations: AllTranslations = {
 
     // Privacy Policy
     "privacy.title": "Privacy Policy",
-    "privacy.updated": "Last updated: April 14, 2026",
+    "privacy.updated": "Last updated: April 27, 2026",
     "privacy.overview.title": "Overview",
     "privacy.overview.text":
-      "DreamRead is designed with privacy in mind. We do not collect, transmit, or store your personal data on any external servers. All data remains on your device.",
+      "DreamRead is designed with privacy in mind. We do not collect, transmit, or store your personal data on our servers. Your data stays on your device, except when you opt in to iCloud Backup — in which case it syncs to your own private iCloud account, not ours.",
     "privacy.health.title": "Health Data (HealthKit)",
     "privacy.health.intro":
       "DreamRead uses Apple HealthKit to read heart rate data from your Apple Watch for the Sleep Detection feature.",
@@ -225,6 +225,19 @@ export const translations: AllTranslations = {
       "Playback progress and bookmarks are stored locally on your device",
     "privacy.content.3":
       "We have no access to your audiobook files or listening history",
+    "privacy.icloud.title": "iCloud Sync (Optional)",
+    "privacy.icloud.intro":
+      "DreamRead offers an optional iCloud Backup feature for Premium subscribers. It is disabled by default and you can turn it off at any time.",
+    "privacy.icloud.1":
+      "When enabled, your library, bookmarks, chapters, folders, and audio files sync to your personal iCloud account via Apple CloudKit",
+    "privacy.icloud.2":
+      "Data is stored only in your private iCloud account; we have no access to it and it is governed by Apple's privacy policy",
+    "privacy.icloud.3":
+      "Sync only happens between devices signed in with the same Apple ID",
+    "privacy.icloud.4":
+      "You can choose to sync audio files over Wi-Fi only, so iCloud Backup never uses your mobile data",
+    "privacy.icloud.5":
+      "Disabling iCloud Backup or signing out of iCloud stops further syncing immediately",
     "privacy.nocollect.title": "Data We Do Not Collect",
     "privacy.nocollect.intro": "DreamRead does not collect:",
     "privacy.nocollect.1": "Personal identifiers (name, email, phone number)",
@@ -232,7 +245,7 @@ export const translations: AllTranslations = {
     "privacy.nocollect.3":
       "Health or fitness data beyond real-time heart rate processing",
     "privacy.nocollect.4":
-      "Usage analytics or crash reports sent to our servers",
+      "Personal identifiers in analytics — we use Firebase for anonymous crash diagnostics and product analytics (see Third-Party Services)",
     "privacy.purchases.title": "Purchases and Subscriptions",
     "privacy.purchases.intro":
       "DreamRead offers optional in-app subscriptions processed entirely by Apple through the App Store.",
@@ -246,8 +259,12 @@ export const translations: AllTranslations = {
       "Apple HealthKit - used to read heart rate data on-device only",
     "privacy.thirdparty.storekit":
       "Apple StoreKit - used to process in-app subscriptions; no payment data is shared with us",
+    "privacy.thirdparty.cloudkit":
+      "Apple CloudKit - used for optional iCloud Backup; data is stored in your private iCloud account and is not accessible by us",
+    "privacy.thirdparty.firebase":
+      "Google Firebase (Crashlytics + Analytics) - collects anonymous crash diagnostics and product usage data; no personal information is shared",
     "privacy.thirdparty.outro":
-      "No other third-party SDKs or advertising networks are used in the mobile app.",
+      "No advertising networks or other third-party SDKs are used in the mobile app.",
 
     "privacy.analytics.title": "Web Analytics (Landing Page)",
     "privacy.analytics.text":
@@ -529,10 +546,10 @@ export const translations: AllTranslations = {
 
     // Privacy Policy
     "privacy.title": "Политика конфиденциальности",
-    "privacy.updated": "Обновлено: 14 апреля 2026",
+    "privacy.updated": "Обновлено: 27 апреля 2026",
     "privacy.overview.title": "Общие сведения",
     "privacy.overview.text":
-      "DreamRead создан с заботой о вашей приватности. Мы не собираем, не передаём и не храним ваши данные на внешних серверах. Вся информация остаётся на вашем устройстве.",
+      "DreamRead создан с заботой о вашей приватности. Мы не собираем, не передаём и не храним ваши данные на наших серверах. Ваши данные остаются на устройстве, за исключением случаев, когда вы включаете iCloud Backup — тогда они синхронизируются в ваш личный аккаунт iCloud, а не на наши серверы.",
     "privacy.health.title": "Данные здоровья (HealthKit)",
     "privacy.health.intro":
       "DreamRead использует Apple HealthKit для чтения данных пульса с Apple Watch в функции определения сна.",
@@ -553,6 +570,19 @@ export const translations: AllTranslations = {
       "Прогресс прослушивания и закладки хранятся локально на вашем устройстве",
     "privacy.content.3":
       "У нас нет доступа к вашим аудиокнигам и истории прослушивания",
+    "privacy.icloud.title": "Синхронизация через iCloud (опционально)",
+    "privacy.icloud.intro":
+      "DreamRead предлагает опциональную функцию iCloud Backup для подписчиков Premium. По умолчанию она выключена, и вы можете отключить её в любой момент.",
+    "privacy.icloud.1":
+      "При включении ваша библиотека, закладки, главы, папки и аудиофайлы синхронизируются в ваш личный аккаунт iCloud через Apple CloudKit",
+    "privacy.icloud.2":
+      "Данные хранятся только в вашем личном iCloud; у нас нет к ним доступа, и они подчиняются политике конфиденциальности Apple",
+    "privacy.icloud.3":
+      "Синхронизация работает только между устройствами, на которых выполнен вход с одним и тем же Apple ID",
+    "privacy.icloud.4":
+      "Вы можете включить опцию синхронизации аудио только по Wi-Fi, чтобы iCloud Backup не расходовал мобильный трафик",
+    "privacy.icloud.5":
+      "Отключение iCloud Backup или выход из iCloud сразу прекращает синхронизацию",
     "privacy.nocollect.title": "Какие данные мы не собираем",
     "privacy.nocollect.intro": "DreamRead не собирает:",
     "privacy.nocollect.1":
@@ -561,7 +591,7 @@ export const translations: AllTranslations = {
     "privacy.nocollect.3":
       "Данные о здоровье, кроме обработки пульса в реальном времени",
     "privacy.nocollect.4":
-      "Аналитику использования или отчёты об ошибках на наши серверы",
+      "Идентифицирующие данные в аналитике — мы используем Firebase для анонимной диагностики сбоев и продуктовой аналитики (см. «Сторонние сервисы»)",
     "privacy.purchases.title": "Покупки и подписки",
     "privacy.purchases.intro":
       "DreamRead предлагает необязательные подписки, которые обрабатываются Apple через App Store.",
@@ -575,8 +605,12 @@ export const translations: AllTranslations = {
       "Apple HealthKit — чтение данных пульса только на устройстве",
     "privacy.thirdparty.storekit":
       "Apple StoreKit — обработка подписок; платёжные данные нам не передаются",
+    "privacy.thirdparty.cloudkit":
+      "Apple CloudKit — используется для опционального iCloud Backup; данные хранятся в вашем личном iCloud и нам недоступны",
+    "privacy.thirdparty.firebase":
+      "Google Firebase (Crashlytics + Analytics) — анонимная диагностика сбоев и продуктовая аналитика; персональные данные не передаются",
     "privacy.thirdparty.outro":
-      "Никакие другие сторонние SDK или рекламные сети не используются в мобильном приложении.",
+      "Рекламные сети и другие сторонние SDK не используются в мобильном приложении.",
 
     "privacy.analytics.title": "Веб-аналитика (Главная страница)",
     "privacy.analytics.text":

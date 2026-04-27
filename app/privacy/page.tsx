@@ -57,6 +57,18 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="glass p-8">
+            <h2 className="text-lg font-semibold mb-3 text-text">{t("privacy.icloud.title")}</h2>
+            <p className="text-text-secondary text-sm leading-relaxed mb-4">{t("privacy.icloud.intro")}</p>
+            <ul className="text-text-secondary text-sm leading-relaxed space-y-2">
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.icloud.1")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.icloud.2")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.icloud.3")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.icloud.4")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.icloud.5")}</li>
+            </ul>
+          </div>
+
+          <div className="glass p-8">
             <h2 className="text-lg font-semibold mb-3 text-text">{t("privacy.nocollect.title")}</h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-4">{t("privacy.nocollect.intro")}</p>
             <ul className="text-text-secondary text-sm leading-relaxed space-y-2">
@@ -82,6 +94,8 @@ export default function PrivacyPolicy() {
             <ul className="text-text-secondary text-sm leading-relaxed space-y-2">
               <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.thirdparty.healthkit")}</li>
               <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.thirdparty.storekit")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.thirdparty.cloudkit")}</li>
+              <li className="flex items-start gap-2"><span className="text-accent mt-1 shrink-0">·</span>{t("privacy.thirdparty.firebase")}</li>
             </ul>
             <p className="text-text-secondary text-sm leading-relaxed mt-4">{t("privacy.thirdparty.outro")}</p>
           </div>
