@@ -1,6 +1,8 @@
 # DreamRead Landing Page
 
-Modern landing page for the DreamRead iOS app - an audiobook player that uses Apple Watch to detect when you fall asleep and automatically pauses playback.
+Modern landing page for DreamRead: the iOS app that auto-pauses audiobooks when the listener falls asleep.
+
+Product positioning guardrail: DreamRead is not a generic audiobook player, reader, or catalog. The landing page must lead with the bedtime problem: people listen to audiobooks before sleep, fall asleep, and lose their place; DreamRead uses Apple Watch sleep/pulse signals to pause playback automatically.
 
 ## Tech Stack
 
@@ -13,6 +15,7 @@ Modern landing page for the DreamRead iOS app - an audiobook player that uses Ap
 ## Features
 
 - Responsive design (mobile-first)
+- Messaging focused on audiobook auto-pause when the listener falls asleep
 - Modern gradient background (deep blue to black)
 - Smooth animations and transitions
 - SEO optimized with metadata

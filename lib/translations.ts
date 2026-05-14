@@ -20,13 +20,13 @@ export const translations: AllTranslations = {
 
     // Hero
     "hero.eyebrow": "— Est. 2026 · Bedtime audiobooks —",
-    "hero.title.a": "The audiobook",
-    "hero.title.b": "player that ",
-    "hero.title.c": "pauses when you do.",
+    "hero.title.a": "Audiobooks",
+    "hero.title.b": "that ",
+    "hero.title.c": "pause when you do.",
     "hero.subtitle":
-      "With Apple Watch, it follows your pulse and, over time, learns how you fall asleep — gently pauses when you drift, and opens tomorrow on the very sentence where sleep found you.",
+      "With Apple Watch, DreamRead follows your pulse and, over time, learns how you fall asleep — gently pauses when you drift, and opens tomorrow on the very sentence where sleep found you.",
     "hero.qualifier.primary": "Apple Watch required for sleep-pause",
-    "hero.qualifier.secondary": "Core player works without it",
+    "hero.qualifier.secondary": "Manual playback works without it",
     "hero.primary": "Download for iPhone",
     "hero.ghost": "See the library",
     "hero.footnote": "Free · No account · 1,000+ public-domain titles",
@@ -61,7 +61,7 @@ export const translations: AllTranslations = {
       "Import MP3, M4A, M4B, FLAC, and more. The books you already own, with chapter marks, bookmarks, and proper controls — a proper place for the library you already have.",
     "features.nofeed.title": "Private by design",
     "features.nofeed.desc":
-      "No account, no servers, no trackers. Your library, your progress, your pulse — all of it stays on your device. Nothing is sold, nothing is pushed — the player just plays what you opened.",
+      "No account, no servers, no trackers. Your library, your progress, your pulse — all of it stays on your device. Nothing is sold, nothing is pushed — DreamRead only pauses what you opened when sleep arrives.",
 
     // How it works
     "how.h2.a": "Three steps,",
@@ -96,8 +96,8 @@ export const translations: AllTranslations = {
     "social.review2.detail": "Import + catalog",
     "social.review3.src": "Quiet note — 003",
     "social.review3.text":
-      "The app stays intentionally quiet: no feed, no ads, no account. Just a calm player designed for night listening.",
-    "social.review3.author": "Quiet player",
+      "The app stays intentionally quiet: no feed, no ads, no account. Just bedtime listening designed around not losing your place.",
+    "social.review3.author": "Sleep-first listening",
     "social.review3.detail": "Bedtime controls",
     "stat.1.n": "1,000+",
     "stat.1.l": "Free classic titles",
@@ -112,11 +112,11 @@ export const translations: AllTranslations = {
     "pricing.h2.a": "Two ways to ",
     "pricing.h2.b": "press play.",
     "pricing.subtitle":
-      "The player is free. Premium adds Apple Watch sleep-pause, an unlimited library, and the full history of everything you've listened to.",
+      "Manual bedtime listening is free. Premium adds Apple Watch sleep-pause, an unlimited library, and the full history of everything you've listened to.",
     "pricing.free.name": "The Library",
     "pricing.free.tag": "Free",
     "pricing.free.desc":
-      "A complete audiobook player. Public-domain classics, your own files, the controls you actually need.",
+      "Everything needed to start listening before bed: public-domain classics, your own files, and calm playback controls.",
     "pricing.free.price": "$0",
     "pricing.free.per": "forever",
     "pricing.free.f1": "Up to 50 audiobooks",
@@ -364,13 +364,13 @@ export const translations: AllTranslations = {
 
     // Hero
     "hero.eyebrow": "— С 2026 · Аудиокниги перед сном —",
-    "hero.title.a": "Аудиоплеер,",
-    "hero.title.b": "который ",
-    "hero.title.c": "замолкает, когда вы засыпаете.",
+    "hero.title.a": "Аудиокниги,",
+    "hero.title.b": "которые ",
+    "hero.title.c": "замолкают, когда вы засыпаете.",
     "hero.subtitle":
-      "С Apple Watch он следит за пульсом и со временем запоминает ваш ритм засыпания — плавно ставит паузу, когда вы задремали, и утром открывается на той фразе, где вы заснули.",
+      "С Apple Watch DreamRead следит за пульсом и со временем запоминает ваш ритм засыпания — плавно ставит паузу, когда вы задремали, и утром открывается на той фразе, где вы заснули.",
     "hero.qualifier.primary": "Для паузы на засыпании нужны Apple Watch",
-    "hero.qualifier.secondary": "Сам плеер работает и без часов",
+    "hero.qualifier.secondary": "Обычное прослушивание работает и без часов",
     "hero.primary": "Скачать на iPhone",
     "hero.ghost": "Открыть библиотеку",
     "hero.footnote": "Бесплатно · Без регистрации · 1000+ книг из классики",
@@ -405,7 +405,7 @@ export const translations: AllTranslations = {
       "Импортируйте MP3, M4A, M4B, FLAC и другие форматы. Книги, которые уже у вас, — с главами, закладками и нормальным управлением. Настоящая полка для настоящей коллекции.",
     "features.nofeed.title": "Приватно по задумке",
     "features.nofeed.desc":
-      "Без аккаунта, без серверов, без трекеров. Ваша библиотека, прогресс и пульс — всё остаётся на устройстве. Мы ничего не продаём и не подсовываем — плеер просто играет то, что вы включили.",
+      "Без аккаунта, без серверов, без трекеров. Ваша библиотека, прогресс и пульс — всё остаётся на устройстве. Мы ничего не продаём и не подсовываем — DreamRead только ставит на паузу то, что вы включили, когда приходит сон.",
 
     // How it works
     "how.h2.a": "Три шага —",
@@ -440,8 +440,8 @@ export const translations: AllTranslations = {
     "social.review2.detail": "Импорт + каталог",
     "social.review3.src": "Тихая заметка — 003",
     "social.review3.text":
-      "Приложение остаётся намеренно тихим: без ленты, без рекламы, без аккаунта. Просто спокойный плеер для прослушивания перед сном.",
-    "social.review3.author": "Тихий плеер",
+      "Приложение остаётся намеренно тихим: без ленты, без рекламы, без аккаунта. Только вечернее прослушивание вокруг главного: не потерять место, когда заснёте.",
+    "social.review3.author": "Прослушивание перед сном",
     "social.review3.detail": "Вечерний контроль",
     "stat.1.n": "1000+",
     "stat.1.l": "Бесплатных классических книг",
@@ -456,11 +456,11 @@ export const translations: AllTranslations = {
     "pricing.h2.a": "Два способа ",
     "pricing.h2.b": "нажать Play.",
     "pricing.subtitle":
-      "Плеер — бесплатен. Premium добавляет паузу при засыпании по Apple Watch, безлимитную библиотеку и полную историю прослушивания без ограничений.",
+      "Обычное прослушивание перед сном — бесплатно. Premium добавляет паузу при засыпании по Apple Watch, безлимитную библиотеку и полную историю прослушивания без ограничений.",
     "pricing.free.name": "Библиотека",
     "pricing.free.tag": "Бесплатно",
     "pricing.free.desc":
-      "Полноценный аудиоплеер. Классика из общественного достояния, ваши файлы, удобное управление без лишнего.",
+      "Всё, чтобы начать слушать перед сном: классика из общественного достояния, ваши файлы и спокойное управление без лишнего.",
     "pricing.free.price": "$0",
     "pricing.free.per": "навсегда",
     "pricing.free.f1": "До 50 аудиокниг",
