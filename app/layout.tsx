@@ -59,7 +59,7 @@ const jsonLd = {
   "applicationCategory": "EntertainmentApplication",
   "description": "App that auto-pauses audiobooks when you fall asleep using Apple Watch sleep and pulse signals. Sleep detection requires Apple Watch; core playback works without it.",
   "url": "https://dreamread.app",
-  "downloadUrl": "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972",
+  "downloadUrl": "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972?pt=128710901&ct=landing_main&mt=8",
   "softwareVersion": "1.5.0",
   "author": {
     "@type": "Organization",

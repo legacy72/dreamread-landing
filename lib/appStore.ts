@@ -11,7 +11,7 @@ const APP_STORE_BASE_URL =
   "https://apps.apple.com/app/dreamread-audiobook-player/id6761422972";
 const APP_STORE_PROVIDER_TOKEN = "128710901";
 const APP_STORE_MEDIA_TYPE_TOKEN = "8";
-const ORGANIC_CAMPAIGN_TOKEN = "landing_organic";
+const MAIN_CAMPAIGN_TOKEN = "landing_main";
 const GOOGLE_ADS_CAMPAIGN_TOKEN = "googleads_launch";
 
 export function resolveAppStoreCampaignToken(
@@ -28,7 +28,7 @@ export function resolveAppStoreCampaignToken(
 
   return isGooglePaidVisit
     ? GOOGLE_ADS_CAMPAIGN_TOKEN
-    : ORGANIC_CAMPAIGN_TOKEN;
+    : MAIN_CAMPAIGN_TOKEN;
 }
 
 export function buildAppStoreUrl(
