@@ -32,6 +32,9 @@ export default function Nav() {
         <a href="#pricing" className="hover:text-[#efe7d8] transition-colors">
           {t("nav.pricing")}
         </a>
+        <a href="#faq" className="hover:text-[#efe7d8] transition-colors">
+          {t("nav.faq")}
+        </a>
         <a href="#cta" className="hover:text-[#efe7d8] transition-colors">
           {t("nav.download")}
         </a>

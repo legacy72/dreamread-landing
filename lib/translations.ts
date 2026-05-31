@@ -15,6 +15,7 @@ export const translations: AllTranslations = {
     "nav.library": "The library",
     "nav.how": "How it works",
     "nav.pricing": "Pricing",
+    "nav.faq": "FAQ",
     "nav.download": "Download",
     "nav.openapp": "Open the app",
 
@@ -352,6 +353,33 @@ export const translations: AllTranslations = {
       "We may update these Terms from time to time. Continued use of the app after changes constitutes acceptance of the updated Terms. The date at the top of this page reflects when the Terms were last revised.",
     "terms.contact.title": "Contact",
     "terms.contact.text": "For questions about these Terms, please contact us at",
+
+    // FAQ - sleep detection (driven by first-user feedback)
+    "faq.eyebrow": "— Common questions —",
+    "faq.title.a": "How sleep",
+    "faq.title.b": "detection works.",
+    "faq.subtitle": "The questions everyone asks before their first night with DreamRead.",
+
+    "faq.q1": "How do I set up sleep detection?",
+    "faq.a1": "Three things, once. (1) Install the DreamRead Watch app from your iPhone's Watch app. (2) Turn on Auto-pause in Settings → Sleep (Premium). (3) On your Apple Watch, open DreamRead one time before bed so we can start a background heart-rate session. After that the screen can dim, lock, even enter Sleep Focus - the app keeps reading your heart rate.",
+
+    "faq.q2": "Does it work with Apple's Sleep Focus?",
+    "faq.a2": "Yes. You do not have to choose between DreamRead and Sleep Focus, and you keep all your Apple sleep metrics. DreamRead uses a background HealthKit workout session, which Apple specifically allows to keep running while Sleep Focus is on.",
+
+    "faq.q3": "Why does the Watch app need to be opened?",
+    "faq.a3": "watchOS requires you to launch the app at least once per session to start its background workout session. We cannot start it remotely from the iPhone - it is an Apple rule. After that one tap, the screen can sleep and the session keeps running until the book stops or the night ends.",
+
+    "faq.q4": "Do I need an Apple Watch?",
+    "faq.a4": "For sleep auto-pause, yes - we read your heart rate from the Watch. The rest of the app (library, catalog, sleep timer, bookmarks, manual playback) works fine on iPhone alone. If you do not have a Watch, just use the sleep timer.",
+
+    "faq.q5": "Where is my heart rate data stored?",
+    "faq.a5": "On your iPhone, locally. Nothing is uploaded to our servers. If you turn on iCloud Sync (Stats) in Settings, your stats sync between your own devices through your private iCloud - we never see it. You can export or delete all data at any time from Settings.",
+
+    "faq.q6": "How much does it cost?",
+    "faq.a6": "Free to start: full library, manual playback, sleep timer, bookmarks, 7-day stats. Premium ($6.99/month or $39.99/year with a 7-day free trial) unlocks Watch-based sleep auto-pause, unlimited library, unlimited stats history, and folder organization.",
+
+    "faq.contact.label": "Still stuck?",
+    "faq.contact.cta": "Email support@dreamread.app",
   },
 
   ru: {
@@ -359,6 +387,7 @@ export const translations: AllTranslations = {
     "nav.library": "Библиотека",
     "nav.how": "Как это работает",
     "nav.pricing": "Тарифы",
+    "nav.faq": "FAQ",
     "nav.download": "Скачать",
     "nav.openapp": "Открыть в App Store",
 
@@ -698,6 +727,33 @@ export const translations: AllTranslations = {
     "terms.contact.title": "Контакты",
     "terms.contact.text":
       "По вопросам об этих условиях пишите нам на",
+
+    // FAQ - детекция сна
+    "faq.eyebrow": "— Частые вопросы —",
+    "faq.title.a": "Как работает",
+    "faq.title.b": "детекция сна.",
+    "faq.subtitle": "То, о чём спрашивают все перед первой ночью с DreamRead.",
+
+    "faq.q1": "Как настроить детекцию сна?",
+    "faq.a1": "Три шага, один раз. (1) Установите DreamRead Watch app через iPhone-приложение Watch. (2) Включите Auto-pause в Settings → Sleep (нужен Premium). (3) Перед сном откройте DreamRead на Apple Watch один раз - так стартует фоновая сессия чтения пульса. Дальше экран может погаснуть, заблокироваться, можно включить Sleep Focus - приложение продолжит читать пульс в фоне.",
+
+    "faq.q2": "Работает ли вместе со Sleep Focus от Apple?",
+    "faq.a2": "Да. Не нужно выбирать между DreamRead и Sleep Focus, все ваши Apple-метрики сна сохраняются. DreamRead использует фоновую HealthKit workout-сессию, которую Apple специально разрешает оставлять работать при включённом Sleep Focus.",
+
+    "faq.q3": "Зачем открывать приложение на часах?",
+    "faq.a3": "watchOS требует запускать приложение хотя бы один раз за сессию, чтобы стартовать фоновую workout-сессию. Удалённо с iPhone запустить нельзя - это правило Apple. После одного тапа экран может погаснуть, а сессия продолжит работать до конца ночи или пока вы не остановите книгу.",
+
+    "faq.q4": "Нужны ли Apple Watch?",
+    "faq.a4": "Для авто-паузы по засыпанию - да, мы читаем пульс с часов. Остальное (библиотека, каталог, таймер сна, закладки, ручное воспроизведение) работает на одном iPhone. Если часов нет - просто пользуйтесь sleep timer.",
+
+    "faq.q5": "Где хранятся мои данные пульса?",
+    "faq.a5": "На iPhone, локально. На наши сервера ничего не уходит. Если включить iCloud Sync (Stats) в Settings - статистика синхронизируется только между вашими устройствами через ваш iCloud, мы её не видим. Все данные можно выгрузить или удалить из Settings.",
+
+    "faq.q6": "Сколько это стоит?",
+    "faq.a6": "Бесплатно для старта: вся библиотека, ручное воспроизведение, таймер сна, закладки, статистика за 7 дней. Premium ($6.99/мес или $39.99/год с 7-дневной пробной версией) добавляет авто-паузу по часам, безлимитную библиотеку, безлимитную историю статистики и организацию по папкам.",
+
+    "faq.contact.label": "Не помогло?",
+    "faq.contact.cta": "Напишите на support@dreamread.app",
   },
 };
 
