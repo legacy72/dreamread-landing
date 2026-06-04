@@ -47,7 +47,7 @@ export const translations: AllTranslations = {
     "features.h2.c": "bedtime ritual.",
     "features.sleep.title": "Sleep-pause",
     "features.sleep.desc":
-      "Your Apple Watch sends heart rate and HRV. You pick when to pause — from a light doze to deep sleep — and DreamRead tunes itself to your own falling-asleep rhythm over time. When you drift, the voice gently pauses, and your place is held until morning.",
+      "Your Apple Watch sends your heart rate. You pick when to pause - from a light doze to deep sleep - and DreamRead tunes itself to your own falling-asleep rhythm over time. When you drift, the voice gently pauses, and your place is held until morning.",
     "features.resume.title": "Resumption",
     "features.resume.desc":
       "Open the app tomorrow and you're right back on the sentence where you fell asleep. Your place saves every few seconds — nothing is ever lost.",
@@ -185,7 +185,7 @@ export const translations: AllTranslations = {
       "Tap the import button in the Library tab to open the Files app. You can import individual files or entire folders. DreamRead also includes a built-in catalog of free audiobooks via LibriVox.",
     "support.faq.q4": "Sleep Detection paused too early / didn't pause at all",
     "support.faq.a4":
-      "You can adjust the sensitivity threshold in Settings → Sleep Detection. Try a lower percentage (e.g. 4%) if the app doesn't detect sleep, or a higher one (e.g. 15%) if it triggers too early.",
+      "If it did not pause at all, first check that you opened the DreamRead Watch app once before bed and that the watch is not in Low Power Mode (it turns off background heart-rate readings). To fine-tune timing, adjust the sensitivity in Settings → Sleep Detection: a lower percentage (e.g. 4%) detects sleep more readily, a higher one (e.g. 15%) avoids triggering too early.",
     "support.faq.q5": "My progress wasn't saved",
     "support.faq.a5":
       "DreamRead saves your position automatically every few seconds during playback. If progress was lost, make sure the app wasn't force-quit during playback.",
@@ -361,10 +361,10 @@ export const translations: AllTranslations = {
     "faq.subtitle": "The questions everyone asks before their first night with DreamRead.",
 
     "faq.q1": "How do I set up sleep detection?",
-    "faq.a1": "Three things, once. (1) Install the DreamRead Watch app from your iPhone's Watch app. (2) Turn on Auto-pause in Settings → Sleep (Premium). (3) On your Apple Watch, open DreamRead one time before bed so we can start a background heart-rate session. After that the screen can dim, lock, even enter Sleep Focus - the app keeps reading your heart rate.",
+    "faq.a1": "Three things, once. (1) Install the DreamRead Watch app from your iPhone's Watch app. (2) Turn on Auto-pause in Settings → Sleep (Premium). (3) On your Apple Watch, open DreamRead one time before bed so we can start a background heart-rate session. After that you can lower your wrist and let the screen dim or lock. One thing to check: keep your watch out of Low Power Mode overnight, since Low Power Mode turns off background heart-rate readings.",
 
     "faq.q2": "Does it work with Apple's Sleep Focus?",
-    "faq.a2": "Yes. You do not have to choose between DreamRead and Sleep Focus, and you keep all your Apple sleep metrics. DreamRead uses a background HealthKit workout session, which Apple specifically allows to keep running while Sleep Focus is on.",
+    "faq.a2": "It is designed to. You do not have to choose between DreamRead and Sleep Focus, and you keep all your Apple sleep metrics - DreamRead reads your heart rate through a background HealthKit workout session, so the watch can dim, lock, or return to the clock face and keep monitoring. Two caveats from real-world testing: keep the watch out of Low Power Mode overnight (it turns off background heart-rate readings), and if a book ever fails to pause under Sleep Focus, email us a Diagnostic Bundle - we are actively improving reliability in this exact scenario.",
 
     "faq.q3": "Why does the Watch app need to be opened?",
     "faq.a3": "watchOS requires you to launch the app at least once per session to start its background workout session. We cannot start it remotely from the iPhone - it is an Apple rule. After that one tap, the screen can sleep and the session keeps running until the book stops or the night ends.",
@@ -419,7 +419,7 @@ export const translations: AllTranslations = {
     "features.h2.c": "ритуал.",
     "features.sleep.title": "Пауза на засыпании",
     "features.sleep.desc":
-      "Apple Watch передают пульс и HRV. Вы сами задаёте момент паузы — от лёгкой дрёмы до глубокого сна, — а приложение со временем подстраивается под ваш ритм засыпания. Когда вы задремали, плеер плавно ставит паузу и сохраняет место до утра.",
+      "Apple Watch передают пульс. Вы сами задаёте момент паузы - от лёгкой дрёмы до глубокого сна, - а приложение со временем подстраивается под ваш ритм засыпания. Когда вы задремали, плеер плавно ставит паузу и сохраняет место до утра.",
     "features.resume.title": "Возвращение к тексту",
     "features.resume.desc":
       "Откройте приложение утром — и вы ровно на той фразе, где заснули. Позиция сохраняется каждые несколько секунд — ничего не потеряется.",
@@ -558,7 +558,7 @@ export const translations: AllTranslations = {
       "Нажмите кнопку импорта на вкладке «Библиотека» — откроется приложение «Файлы». Можно добавлять отдельные файлы или целые папки. Также доступен встроенный каталог бесплатных аудиокниг от LibriVox.",
     "support.faq.q4": "Пауза сработала слишком рано — или не сработала вовсе",
     "support.faq.a4":
-      "Настройте чувствительность в разделе Настройки → Определение сна. Попробуйте меньший порог (например, 4%), если приложение не замечает засыпание, или больший (например, 15%), если срабатывает слишком рано.",
+      "Если пауза не сработала вовсе - сначала проверьте, что вы один раз открыли DreamRead на Apple Watch перед сном и что часы не в режиме энергосбережения (он отключает фоновое чтение пульса). Для тонкой настройки момента измените чувствительность в разделе Настройки → Определение сна: меньший порог (например, 4%) замечает засыпание охотнее, больший (например, 15%) реже срабатывает слишком рано.",
     "support.faq.q5": "Прогресс не сохранился",
     "support.faq.a5":
       "DreamRead сохраняет позицию автоматически каждые несколько секунд во время воспроизведения. Если прогресс пропал, убедитесь, что приложение не было принудительно закрыто во время прослушивания.",
@@ -735,10 +735,10 @@ export const translations: AllTranslations = {
     "faq.subtitle": "То, о чём спрашивают все перед первой ночью с DreamRead.",
 
     "faq.q1": "Как настроить детекцию сна?",
-    "faq.a1": "Три шага, один раз. (1) Установите DreamRead Watch app через iPhone-приложение Watch. (2) Включите Auto-pause в Settings → Sleep (нужен Premium). (3) Перед сном откройте DreamRead на Apple Watch один раз - так стартует фоновая сессия чтения пульса. Дальше экран может погаснуть, заблокироваться, можно включить Sleep Focus - приложение продолжит читать пульс в фоне.",
+    "faq.a1": "Три шага, один раз. (1) Установите DreamRead Watch app через iPhone-приложение Watch. (2) Включите Auto-pause в Settings → Sleep (нужен Premium). (3) Перед сном откройте DreamRead на Apple Watch один раз - так стартует фоновая сессия чтения пульса. Дальше можно опустить запястье и дать экрану погаснуть или заблокироваться. Один момент: не оставляйте часы в режиме энергосбережения (Low Power Mode) на ночь - он отключает фоновое чтение пульса.",
 
     "faq.q2": "Работает ли вместе со Sleep Focus от Apple?",
-    "faq.a2": "Да. Не нужно выбирать между DreamRead и Sleep Focus, все ваши Apple-метрики сна сохраняются. DreamRead использует фоновую HealthKit workout-сессию, которую Apple специально разрешает оставлять работать при включённом Sleep Focus.",
+    "faq.a2": "Так задумано. Не нужно выбирать между DreamRead и Sleep Focus, все ваши Apple-метрики сна сохраняются - DreamRead читает пульс через фоновую HealthKit workout-сессию, поэтому часы могут гаснуть, блокироваться или вернуться к циферблату и продолжать мониторинг. Две оговорки по итогам реальных тестов: не оставляйте часы в режиме энергосбережения на ночь (он отключает фоновое чтение пульса), и если книга вдруг не встала на паузу под Sleep Focus - напишите нам и пришлите Diagnostic Bundle, мы целенаправленно дорабатываем надёжность в этом сценарии.",
 
     "faq.q3": "Зачем открывать приложение на часах?",
     "faq.a3": "watchOS требует запускать приложение хотя бы один раз за сессию, чтобы стартовать фоновую workout-сессию. Удалённо с iPhone запустить нельзя - это правило Apple. После одного тапа экран может погаснуть, а сессия продолжит работать до конца ночи или пока вы не остановите книгу.",
