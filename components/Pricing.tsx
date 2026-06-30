@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import AppStoreButton from "./AppStoreButton";
+import Reveal from "./Reveal";
 
 const FREE_FEATURES = [
   "pricing.free.f1",
@@ -41,7 +42,7 @@ export default function Pricing() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 border border-[rgba(239,231,216,0.16)]">
+      <Reveal className="grid grid-cols-1 md:grid-cols-2 border border-[rgba(239,231,216,0.16)]">
         {/* Free */}
         <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-[rgba(239,231,216,0.16)]">
           <div className="flex items-baseline justify-between pb-5 mb-6 border-b border-[rgba(239,231,216,0.16)]">
@@ -112,7 +113,7 @@ export default function Pricing() {
           <div className="flex items-center gap-1 mb-5 p-1 rounded-[6px] w-fit bg-[rgba(239,231,216,0.04)]">
             <button
               onClick={() => setIsAnnual(true)}
-              className={`px-3 py-1.5 rounded-[4px] text-[11px] font-semibold tracking-[0.4px] uppercase transition-colors ${
+              className={`px-3 py-1.5 rounded-[4px] text-[11px] font-semibold tracking-[0.4px] uppercase cursor-pointer transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c97a4a] focus-visible:outline-offset-2 ${
                 isAnnual
                   ? "bg-[#c97a4a] text-[#efe7d8]"
                   : "text-[rgba(239,231,216,0.62)]"
@@ -122,7 +123,7 @@ export default function Pricing() {
             </button>
             <button
               onClick={() => setIsAnnual(false)}
-              className={`px-3 py-1.5 rounded-[4px] text-[11px] font-semibold tracking-[0.4px] uppercase transition-colors ${
+              className={`px-3 py-1.5 rounded-[4px] text-[11px] font-semibold tracking-[0.4px] uppercase cursor-pointer transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c97a4a] focus-visible:outline-offset-2 ${
                 !isAnnual
                   ? "bg-[#c97a4a] text-[#efe7d8]"
                   : "text-[rgba(239,231,216,0.62)]"
@@ -174,7 +175,7 @@ export default function Pricing() {
               : t("pricing.premium.note.monthly")}
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

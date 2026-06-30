@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
+import Reveal from "./Reveal";
 
 interface Review {
   srcKey: string;
@@ -57,7 +58,7 @@ export default function SocialProof() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
         {REVIEWS.map((r, i) => (
-          <div key={i} className="border-t border-[#efe7d8] pt-5">
+          <Reveal key={i} delayMs={i * 90} className="border-t border-[#efe7d8] pt-5">
             <div
               className="meta-mono text-[rgba(239,231,216,0.42)] mb-4"
               style={{ letterSpacing: "2.2px" }}
@@ -73,11 +74,11 @@ export default function SocialProof() {
               </strong>{" "}
               · {t(r.detailKey)}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-b border-[rgba(239,231,216,0.16)]">
+      <Reveal className="mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-b border-[rgba(239,231,216,0.16)]">
         {STATS.map((s, i) => (
           <div
             key={i}
@@ -89,7 +90,7 @@ export default function SocialProof() {
                   : "0.5px solid rgba(239,231,216,0.16)",
             }}
           >
-            <div className="font-display text-[40px] md:text-[48px] font-normal tracking-[-1.4px] leading-[1] text-[#c97a4a]">
+            <div className="font-display text-[40px] md:text-[48px] font-normal tracking-[-1.4px] leading-[1] text-[#c97a4a] tnum">
               {t(s.n)}
             </div>
             <div className="meta-mono text-[rgba(239,231,216,0.42)] mt-2">
@@ -97,7 +98,7 @@ export default function SocialProof() {
             </div>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

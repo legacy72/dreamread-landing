@@ -51,7 +51,7 @@ export default function FAQ() {
                 type="button"
                 onClick={() => setOpenId(isOpen ? null : qa.k)}
                 aria-expanded={isOpen}
-                className="w-full flex items-start gap-5 py-6 text-left transition-colors hover:bg-[rgba(239,231,216,0.02)]"
+                className="w-full flex items-start gap-5 py-6 text-left cursor-pointer transition-colors hover:bg-[rgba(239,231,216,0.02)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c97a4a] focus-visible:outline-offset-[-2px]"
               >
                 <span className="meta-mono text-[rgba(239,231,216,0.42)] mt-1 shrink-0">
                   {qa.k}
@@ -67,13 +67,16 @@ export default function FAQ() {
                   +
                 </span>
               </button>
-              {isOpen && (
-                <div className="pb-7 pl-[60px] pr-6">
-                  <p className="text-[14px] leading-[1.7] text-[rgba(239,231,216,0.72)] m-0">
+              <div
+                className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
+                style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+              >
+                <div className="overflow-hidden">
+                  <p className="pb-7 pl-[60px] pr-6 text-[14px] leading-[1.7] text-[rgba(239,231,216,0.72)] m-0">
                     {t(qa.aKey)}
                   </p>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

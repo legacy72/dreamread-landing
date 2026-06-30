@@ -9,6 +9,7 @@
   --color-accent: #c97a4a;
   --color-accent-light: #d48758;
   --color-accent-soft: rgba(201, 122, 74, 0.14);
+  --color-accent-glow: rgba(201, 122, 74, 0.22);
   --color-accent-ink: #efe7d8;
   --color-border: rgba(239, 231, 216, 0.08);
   --color-border-strong: rgba(239, 231, 216, 0.16);
@@ -21,6 +22,8 @@
   --font-display: "Fraunces", "Iowan Old Style", "Georgia", serif;
   --font-body: "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: "SF Mono", ui-monospace, monospace;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *,
@@ -35,6 +38,20 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep section anchors clear of the sticky nav when jumped to. */
+#top,
+#features,
+#how,
+#pricing,
+#faq,
+#cta {
+  scroll-margin-top: 84px;
+}
+
 body {
   background: #15161b;
   color: #efe7d8;
@@ -43,11 +60,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  /* Two warm layers: a terracotta dawn at the top, a faint ember low-left,
+     so the page reads like a dim bedside lamp rather than a flat dark slab. */
   background-image: radial-gradient(
-    70% 50% at 50% 0%,
-    rgba(201, 122, 74, 0.06) 0%,
-    transparent 70%
-  );
+      60% 42% at 50% -4%,
+      rgba(201, 122, 74, 0.1) 0%,
+      transparent 72%
+    ),
+    radial-gradient(
+      48% 40% at 8% 18%,
+      rgba(201, 122, 74, 0.05) 0%,
+      transparent 70%
+    );
+  background-attachment: fixed;
 }
 
 .font-display {
@@ -78,6 +103,12 @@ body {
   border-color: rgba(239, 231, 216, 0.16);
 }
 
+/* Tabular figures keep the live bpm readout from jittering as digits change. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -94,14 +125,19 @@ body {
   font-family: inherit;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(201, 122, 74, 0.3);
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out,
-    background 200ms ease-out;
+  transition: transform 200ms var(--ease-out-soft),
+    box-shadow 200ms var(--ease-out-soft), background 200ms var(--ease-out-soft);
   text-decoration: none;
 }
 .btn-primary:hover {
   background: #d48758;
   box-shadow: 0 12px 32px rgba(201, 122, 74, 0.4);
   transform: translateY(-1px);
+}
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible {
+  outline: 2px solid #d48758;
+  outline-offset: 3px;
 }
 
 .btn-ghost {
@@ -119,59 +155,129 @@ body {
   font-family: inherit;
   cursor: pointer;
   text-decoration: none;
-  transition: background 200ms ease-out, border-color 200ms ease-out;
+  transition: background 200ms var(--ease-out-soft),
+    border-color 200ms var(--ease-out-soft);
 }
 .btn-ghost:hover {
   background: rgba(239, 231, 216, 0.04);
   border-color: rgba(239, 231, 216, 0.32);
 }
 
-.hero-card {
-  background: #efe7d8;
-  color: #2b261c;
-  padding: 36px;
-  border-radius: 4px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5),
-    inset 0 0 0 0.5px rgba(0, 0, 0, 0.08);
-  transform: rotate(-1.5deg);
-  max-width: 360px;
+/* iPhone mockup ------------------------------------------------------------ */
+.device-frame {
   position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1320 / 2868;
+  border-radius: 13% / 6%;
+  padding: 2.6%;
+  background: linear-gradient(150deg, #2a2b33 0%, #16171c 46%, #2a2b33 100%);
+  box-shadow: 0 50px 90px -30px rgba(0, 0, 0, 0.7),
+    0 8px 28px rgba(0, 0, 0, 0.4), inset 0 0 0 0.5px rgba(239, 231, 216, 0.14),
+    inset 0 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.device-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10.5% / 5%;
+  overflow: hidden;
+  background: #000;
+}
+.device-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Dynamic Island */
+.device-island {
+  position: absolute;
+  top: 2.4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 2.4%;
+  min-height: 16px;
+  background: #000;
+  border-radius: 999px;
   z-index: 2;
 }
-.hero-card::before,
-.hero-card::after {
+/* Soft screen sheen */
+.device-screen::after {
   content: "";
   position: absolute;
-  left: 36px;
-  right: 36px;
-  height: 0.5px;
-  background: rgba(43, 38, 28, 0.2);
-}
-.hero-card::before {
-  top: 50px;
-}
-.hero-card::after {
-  bottom: 60px;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 36%
+  );
+  pointer-events: none;
 }
 
-.hero-stamp {
-  position: absolute;
-  top: 60px;
-  right: 40px;
-  padding: 18px 24px;
-  border: 1.5px solid #c97a4a;
-  color: #c97a4a;
-  font-family: "Fraunces", serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transform: rotate(8deg);
-  border-radius: 2px;
-  z-index: 3;
-  background: rgba(201, 122, 74, 0.05);
+/* Floating glass chip (hero pulse readout, FAQ contact, etc.) -------------- */
+.chip-glass {
+  background: rgba(21, 22, 27, 0.82);
+  border: 0.5px solid rgba(239, 231, 216, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.7);
+  /* The frost (backdrop-filter) is applied inline on the chip components:
+     Lightning CSS strips backdrop-filter from class rules in this build, so
+     the translucent background above would let the screenshot bleed through. */
 }
 
+/* Pulse / ECG line --------------------------------------------------------- */
+.pulse-path {
+  stroke-dasharray: var(--pulse-len, 1000);
+  stroke-dashoffset: var(--pulse-len, 1000);
+  animation: pulse-draw 4.6s var(--ease-out-soft) infinite;
+}
+@keyframes pulse-draw {
+  0% {
+    stroke-dashoffset: var(--pulse-len, 1000);
+  }
+  55% {
+    stroke-dashoffset: 0;
+  }
+  88% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* The narrative panel draws once when scrolled into view. */
+.pulse-once .pulse-draw-once {
+  stroke-dasharray: var(--pulse-len, 1000);
+  stroke-dashoffset: var(--pulse-len, 1000);
+}
+.pulse-once.is-visible .pulse-draw-once {
+  animation: pulse-draw-once 3.6s var(--ease-out-soft) forwards;
+}
+@keyframes pulse-draw-once {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.pulse-once .pulse-paused {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.pulse-once.is-visible .pulse-paused {
+  animation: pulse-paused-in 0.7s var(--ease-out-soft) 3.1s forwards;
+}
+@keyframes pulse-paused-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero load-in ------------------------------------------------------------- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -182,12 +288,10 @@ body {
     transform: translateY(0);
   }
 }
-
 .animate-fadeInUp {
-  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInUp 0.7s var(--ease-out-soft) forwards;
   opacity: 0;
 }
-
 .delay-100 {
   animation-delay: 0.1s;
 }
@@ -204,6 +308,19 @@ body {
   animation-delay: 0.5s;
 }
 
+/* Scroll reveal ------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out-soft),
+    transform 0.8s var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -218,30 +335,47 @@ body {
   background: rgba(239, 231, 216, 0.22);
 }
 
-/* Legacy classes retained so /privacy, /terms, /support pages render on the
+/* Legacy classes retained so /privacy, /terms, /support render on the
    new palette without needing a full rewrite. */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(239, 231, 216, 0.12),
-    transparent
-  );
-  margin: 0 auto;
-  max-width: 60%;
-}
-
 .glass {
   background: rgba(239, 231, 216, 0.03);
   border: 0.5px solid rgba(239, 231, 216, 0.12);
   border-radius: 8px;
 }
-
 .glass-hover {
-  transition: border-color 200ms ease-out, background 200ms ease-out;
+  transition: border-color 200ms var(--ease-out-soft),
+    background 200ms var(--ease-out-soft);
 }
 .glass-hover:hover {
   border-color: rgba(201, 122, 74, 0.3);
   background: rgba(239, 231, 216, 0.05);
+}
+
+/* Honour reduced-motion: keep everything legible, drop the movement. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fadeInUp,
+  .pulse-path,
+  .pulse-once.is-visible .pulse-draw-once,
+  .pulse-once.is-visible .pulse-paused {
+    animation: none !important;
+  }
+  .animate-fadeInUp {
+    opacity: 1;
+  }
+  .pulse-path,
+  .pulse-once .pulse-draw-once {
+    stroke-dashoffset: 0;
+  }
+  .pulse-once .pulse-paused {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

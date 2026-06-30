@@ -31,15 +31,23 @@ export const translations: AllTranslations = {
     "hero.primary": "Download for iPhone",
     "hero.ghost": "See the library",
     "hero.footnote": "Free · No account · 1,000+ public-domain titles",
+    "hero.screenshot.alt":
+      "DreamRead library screen on iPhone, with a Continue Listening card and recently added audiobooks",
 
-    // Hero paper card
-    "herocard.cap.left": "Chapter VI · p. 58",
-    "herocard.cap.right": "— Pride and Prejudice —",
-    "herocard.quote":
-      "In a very few minutes she was joined by Bingley, whose confidence in her judgement more than justified Jane's…",
-    "herocard.meta.left": "· 62 bpm · monitoring ·",
-    "herocard.meta.right": "− 37:46",
-    "herocard.stamp": "No. I",
+    // Pulse / sleep-pause visual
+    "pulse.tag": "Apple Watch",
+    "pulse.bpm": "BPM",
+    "pulse.monitoring": "Monitoring",
+    "pulse.chip.aria":
+      "Live Apple Watch heart rate, 62 BPM, monitoring for sleep",
+    "pulse.eyebrow": "- The moment it matters -",
+    "pulse.caption":
+      "DreamRead follows your Apple Watch heart rate and pauses the instant you fall asleep.",
+    "pulse.awake": "Awake",
+    "pulse.drifting": "Drifting off",
+    "pulse.asleep": "Asleep",
+    "pulse.paused.title": "Paused",
+    "pulse.paused.desc": "Your place is held",
 
     // Features section
     "features.h2.a": "A quieter kind",
@@ -403,15 +411,23 @@ export const translations: AllTranslations = {
     "hero.primary": "Скачать на iPhone",
     "hero.ghost": "Открыть библиотеку",
     "hero.footnote": "Бесплатно · Без регистрации · 1000+ книг из классики",
+    "hero.screenshot.alt":
+      "Экран библиотеки DreamRead на iPhone: карточка «Продолжить» и недавно добавленные аудиокниги",
 
-    // Hero paper card
-    "herocard.cap.left": "Глава VI · с. 58",
-    "herocard.cap.right": "— Гордость и предубеждение —",
-    "herocard.quote":
-      "Через несколько минут к ней подошёл Бингли — его доверие к её суждениям более чем оправдало надежды Джейн…",
-    "herocard.meta.left": "· 62 уд/мин · пульс ·",
-    "herocard.meta.right": "− 37:46",
-    "herocard.stamp": "№ I",
+    // Pulse / sleep-pause visual
+    "pulse.tag": "Apple Watch",
+    "pulse.bpm": "уд/мин",
+    "pulse.monitoring": "Пульс",
+    "pulse.chip.aria":
+      "Живой пульс с Apple Watch, 62 удара в минуту, слежение за засыпанием",
+    "pulse.eyebrow": "- Тот самый момент -",
+    "pulse.caption":
+      "DreamRead следит за пульсом с Apple Watch и ставит паузу, как только вы засыпаете.",
+    "pulse.awake": "Бодрствуете",
+    "pulse.drifting": "Засыпаете",
+    "pulse.asleep": "Уснули",
+    "pulse.paused.title": "Пауза",
+    "pulse.paused.desc": "Место сохранено",
 
     // Features section
     "features.h2.a": "Тихий",

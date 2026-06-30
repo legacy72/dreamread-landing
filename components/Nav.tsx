@@ -8,8 +8,11 @@ export default function Nav() {
   const { t } = useLanguage();
 
   return (
-    <nav className="flex items-center justify-between gap-4 px-6 md:px-14 py-6 md:py-7 border-b border-[rgba(239,231,216,0.08)]">
-      <a href="#top" className="flex items-center text-[#efe7d8] no-underline">
+    <nav className="sticky top-0 z-40 flex items-center justify-between gap-4 px-6 md:px-14 py-5 md:py-6 border-b border-[rgba(239,231,216,0.08)] bg-[rgba(21,22,27,0.72)] backdrop-blur-md supports-[backdrop-filter]:bg-[rgba(21,22,27,0.62)]">
+      <a
+        href="#top"
+        className="flex items-center text-[#efe7d8] no-underline shrink-0"
+      >
         <img
           src="/icon-192x192.png"
           alt="D"
@@ -40,11 +43,12 @@ export default function Nav() {
         </a>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
         <LanguageSwitcher />
         <AppStoreButton
           label={t("nav.openapp")}
-          className="!px-[18px] !py-[10px] !text-[12px]"
+          labelClassName="hidden sm:inline"
+          className="!px-3 sm:!px-[18px] !py-[10px] !text-[12px]"
           analyticsSource="nav"
         />
       </div>
